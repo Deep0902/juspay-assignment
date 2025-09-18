@@ -1,37 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import appLogo from '/favicon.png'
-import PWABadge from './PWABadge.jsx'
-import './App.css'
+import React from "react";
+import "./App.css";
+import "./theme.css";
+import PWABadge from "./PWABadge.jsx";
+import { ThemeProvider, useTheme } from "./ThemeContext.jsx";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+function ThemeToggleButton() {
+  const { theme, toggleTheme } = useTheme();
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={appLogo} className="logo" alt="juspay-assignment logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>juspay-assignment</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-      <PWABadge />
-    </>
-  )
+    <button onClick={toggleTheme} style={{ marginBottom: 24 }}>
+      Switch to {theme === "light" ? "Dark" : "Light"} Theme
+    </button>
+  );
 }
 
-export default App
+function AppContent() {
+  const { theme } = useTheme();
+  return (
+    <div
+      className="themed-bg"
+      style={{
+        minHeight: "100vh",
+        background: `var(--${theme}-bg-primary)`,
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <ThemeToggleButton />
+      <h1 className="themed-text" style={{ color: `var(--${theme}-text-primary)` }}>
+        This is Juspay Assignment
+      </h1>
+      <PWABadge />
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <ThemeProvider>
+      <AppContent />
+    </ThemeProvider>
+  );
+}
+
+export default App;
