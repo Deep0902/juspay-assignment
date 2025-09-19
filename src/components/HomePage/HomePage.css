@@ -1,20 +1,20 @@
 /* Container */
 .layout-container {
   height: 100vh;
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-primary);
   display: flex;
   overflow: hidden;
 }
 
 /* Left Panel */
 .left-panel {
-  background-color: var(--sidebar-bg);
+  background-color: var(--bg-primary);
   border-right: 1px solid var(--border-color-default);
   transition: width 0.3s ease-in-out;
   overflow: hidden;
   /* box-shadow left as is for now */
   backdrop-filter: blur(10px);
-  background: var(--sidebar-bg);
+  background: var(--bg-primary);
 }
 
 .left-panel.open {
@@ -29,6 +29,7 @@
 .panel-content {
   width: 256px;
   height: 100%;
+  background: var(--bg-primary);
   padding: 16px;
 }
 
@@ -36,6 +37,7 @@
   width: 288px;
   height: 100%;
   padding: 16px;
+  background: var(--bg-primary);
 }
 
 /* Panel Header */
@@ -99,7 +101,7 @@
 
 /* Header */
 .header {
-  background: var(--header-bg);
+  background: var(--bg-primary);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-color-default);
   padding: 16px 24px;
@@ -117,12 +119,12 @@
 .header-right {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 10px;
 }
 
 /* Menu Button */
 .menu-button {
-  padding: 8px;
+  padding: 4px;
   border-radius: 6px;
   border: none;
   background-color: transparent;
@@ -136,14 +138,18 @@
 
 /* Title */
 .title {
-  font-size: 20px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 400;
   color: var(--text-primary);
 }
 
 /* Search */
 .search-container {
   position: relative;
+  .search-icon {
+    position: absolute;
+    z-index: 1;
+  }
 }
 
 .search-input {
@@ -308,7 +314,7 @@
 }
 
 .activity-item:hover {
-  background: var(--bg-secondary);
+  background: var(--bg-primary);
   transform: translateX(4px);
 }
 
@@ -348,7 +354,7 @@
 
 /* Right Panel */
 .right-panel {
-  background: var(--sidebar-bg);
+  background: var(--bg-primary);
   backdrop-filter: blur(10px);
   border-left: 1px solid var(--border-color-default);
   transition: width 0.3s ease-in-out;
@@ -472,7 +478,11 @@
 /* Apply Button */
 .apply-button {
   width: 100%;
-  background: linear-gradient(135deg, var(--interactive-primary), var(--interactive-hover));
+  background: linear-gradient(
+    135deg,
+    var(--interactive-primary),
+    var(--interactive-hover)
+  );
   color: white;
   padding: 12px 16px;
   border-radius: 8px;
@@ -487,7 +497,11 @@
 }
 
 .apply-button:hover {
-  background: linear-gradient(135deg, var(--interactive-hover), var(--interactive-primary));
+  background: linear-gradient(
+    135deg,
+    var(--interactive-hover),
+    var(--interactive-primary)
+  );
   transform: translateY(-1px);
   box-shadow: 0 4px 12px var(--interactive-primary, rgba(37, 99, 235, 0.3));
 }
@@ -554,4 +568,37 @@
   .content {
     padding: 16px;
   }
+}
+.opacity-0 {
+  opacity: 0;
+}
+.opacity-10 {
+  opacity: 0.1;
+}
+.opacity-20 {
+  opacity: 0.2;
+}
+.opacity-30 {
+  opacity: 0.3;
+}
+.opacity-40 {
+  opacity: 0.4;
+}
+.opacity-50 {
+  opacity: 0.5;
+}
+.opacity-60 {
+  opacity: 0.6;
+}
+.opacity-70 {
+  opacity: 0.7;
+}
+.opacity-80 {
+  opacity: 0.8;
+}
+.opacity-90 {
+  opacity: 0.9;
+}
+.opacity-100 {
+  opacity: 1;
 }

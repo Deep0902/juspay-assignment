@@ -87,7 +87,7 @@ body {
 }
 body.theme-dark {
   /* General UI & Backgrounds */
-  --bg-primary: #1f2128; /* Main background color for the entire app */
+  --bg-primary: #1c1c1c; /* Main background color for the entire app */
   --bg-secondary: #2b2d37; /* Background for sidebars, cards, and sections */
   --bg-tertiary: #3a3d49; /* Slightly lighter background for some subtle differentiation (e.g., table header rows, hovered states) */
   --border-color-default: #3a3d49; /* Default border color for inputs, cards, separators */

@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./HomePage.css";
 import { useTheme } from "../../ThemeContext.jsx";
+import RightPanel from "../RightPanel/RightPanel.jsx";
+import LeftPanel from "../LeftPanel/LeftPanel.jsx";
 function HomePage() {
   const [leftPanelOpen, setLeftPanelOpen] = useState(false);
   const [rightPanelOpen, setRightPanelOpen] = useState(false);
@@ -15,7 +17,7 @@ function HomePage() {
     <div className="layout-container">
       {/* Left Drawer */}
       <div className={`left-panel ${leftPanelOpen ? "open" : "closed"}`}>
-        <div className="panel-content">
+        {/* <div className="panel-content">
           <div className="panel-header">
             <h2 className="panel-title">Navigation</h2>
             <button onClick={toggleLeftPanel} className="close-button"></button>
@@ -49,7 +51,8 @@ function HomePage() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
+        <LeftPanel/>
       </div>
 
       {/* Main Content Area */}
@@ -63,31 +66,32 @@ function HomePage() {
             <button className="menu-button">
               <img src={iconPath("Star.svg")} alt="Star" />
             </button>
-            <h1 className="title">Dashboards</h1>
-            <h1 className="title">/</h1>
+            <h1 className="title opacity-40">Dashboards</h1>
+            <h1 className="title opacity-40">/</h1>
             <h1 className="title">Default</h1>
           </div>
 
           <div className="header-right">
             <div className="search-container">
+              <img src="/Search.svg" alt="" className="search-icon"/>
               <input
                 type="text"
                 placeholder="Search..."
                 className="search-input"
               />
-              <button className="menu-button" onClick={toggleTheme}>
-                <img src={iconPath("Sun.svg")} alt="Sun" />
-              </button>
-              <button className="menu-button">
-                <img src={iconPath("ClockCounterClockwise.svg")} alt="Clock" />
-              </button>
-              <button className="menu-button">
-                <img src={iconPath("Bell.svg")} alt="Bell" />
-              </button>
-              <button onClick={toggleRightPanel} className="menu-button">
-                <img src={iconPath("Sidebar.svg")} alt="Sidebar" />
-              </button>
             </div>
+            <button className="menu-button" onClick={toggleTheme}>
+              <img src={iconPath("Sun.svg")} alt="Sun" />
+            </button>
+            <button className="menu-button">
+              <img src={iconPath("ClockCounterClockwise.svg")} alt="Clock" />
+            </button>
+            <button className="menu-button">
+              <img src={iconPath("Bell.svg")} alt="Bell" />
+            </button>
+            <button onClick={toggleRightPanel} className="menu-button">
+              <img src={iconPath("Sidebar.svg")} alt="Sidebar" />
+            </button>
           </div>
         </header>
 
@@ -151,7 +155,7 @@ function HomePage() {
 
       {/* Right Drawer */}
       <div className={`right-panel ${rightPanelOpen ? "open" : "closed"}`}>
-        <div className="right-panel-content">
+        {/* <div className="right-panel-content">
           <div className="panel-header">
             <h2 className="panel-title">Filters & Options</h2>
             <button
@@ -218,7 +222,8 @@ function HomePage() {
 
             <button className="apply-button">Apply Filters</button>
           </div>
-        </div>
+        </div> */}
+        <RightPanel/>
       </div>
     </div>
   );
