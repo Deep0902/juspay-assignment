@@ -53,7 +53,7 @@ function HomePage() {
             </div>
           </div>
         </div> */}
-        <LeftPanel/>
+        <LeftPanel />
       </div>
 
       {/* Main Content Area */}
@@ -74,7 +74,7 @@ function HomePage() {
 
           <div className="header-right">
             <div className="search-container">
-              <img src="/Search.svg" alt="" className="search-icon"/>
+              <img src="/Search.svg" alt="" className="search-icon" />
               <input
                 type="text"
                 placeholder="Search..."
@@ -87,12 +87,14 @@ function HomePage() {
             <button className="menu-button">
               <img src={iconPath("ClockCounterClockwise.svg")} alt="Clock" />
             </button>
-            <button className="menu-button">
+            <button className="menu-button" onClick={toggleRightPanel}>
               <img src={iconPath("Bell.svg")} alt="Bell" />
             </button>
-            <button onClick={toggleRightPanel} className="menu-button">
-              <img src={iconPath("Sidebar.svg")} alt="Sidebar" />
-            </button>
+            {rightPanelOpen && (
+              <button onClick={toggleRightPanel} className="menu-button">
+                <img src={iconPath("Sidebar.svg")} alt="Sidebar" />
+              </button>
+            )}
           </div>
         </header>
 
@@ -172,7 +174,7 @@ function HomePage() {
             <button className="apply-button">Apply Filters</button>
           </div>
         </div> */}
-        <RightPanel/>
+        <RightPanel />
       </div>
     </div>
   );
