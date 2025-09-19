@@ -1,7 +1,6 @@
 .profile {
   display: flex;
   align-items: center;
-
   gap: 12px;
 }
 .profile-name {
@@ -11,7 +10,7 @@
 }
 .left-panel-content {
   padding-left: 16px;
-  margin-top: 16px;
+  margin-top: 20px;
 }
 .toggle-switch {
   color: var(--text-primary);
@@ -24,7 +23,6 @@
 
 .toggle-option {
   cursor: pointer;
-  transition: color 0.2s, font-weight 0.2s;
   color: var(--text-secondary);
 }
 
