@@ -3,7 +3,8 @@ import "./App.css";
 import "./theme.css";
 import PWABadge from "./PWABadge.jsx";
 import { ThemeProvider, useTheme } from "./ThemeContext.jsx";
-
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import HomePage from "./components/HomePage/HomePage.jsx";
 function ThemeToggleButton() {
   const { theme, toggleTheme } = useTheme();
   return (
@@ -28,7 +29,10 @@ function AppContent() {
       }}
     >
       <ThemeToggleButton />
-      <h1 className="themed-text" style={{ color: `var(--${theme}-text-primary)` }}>
+      <h1
+        className="themed-text"
+        style={{ color: `var(--${theme}-text-primary)` }}
+      >
         This is Juspay Assignment
       </h1>
       <PWABadge />
@@ -39,7 +43,12 @@ function AppContent() {
 function App() {
   return (
     <ThemeProvider>
-      <AppContent />
+      {/* <AppContent /> */}
+      <Router>
+        <Routes>
+          <Route path="/" index element={<HomePage />} />
+        </Routes>
+      </Router>
     </ThemeProvider>
   );
 }
