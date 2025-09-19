@@ -1,68 +1,136 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
+:root {
+  /* General UI & Backgrounds */
+  --bg-primary: #ffffff; /* Main background color for the entire app */
+  --bg-secondary: #f8f8fb; /* Background for sidebars, cards, and sections (e.g., dashboard cards) */
+  --bg-tertiary: #f1f3f9; /* Lighter background for some subtle differentiation (e.g., table header rows, hovered states) */
+  --border-color-default: #e0e2e7; /* Default border color for inputs, cards, separators */
+  --border-color-subtle: #edf0f5; /* Very light borders for table rows or subtle dividers */
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+  /* Text Colors */
+  --text-primary: #1c243b; /* Main body text, headings, primary labels */
+  --text-secondary: #747b89; /* Secondary text, descriptions, inactive labels */
+  --text-tertiary: #9aa1af; /* Placeholder text, very subtle labels, disabled text */
+  --text-link: #3b82f6; /* Link text color (e.g., "See all") */
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
+  /* Action & Interactive Elements */
+  --interactive-primary: #4a60da; /* Primary interactive color (e.g., active sidebar links, primary buttons) */
+  --interactive-hover: #5d75eb; /* Hover state for primary interactive elements */
+  --icon-default: #747b89; /* Default icon color */
+  --icon-active: #1c243b; /* Active icon color */
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+  /* Status Colors (for badges) */
+  --status-in-progress-bg: #ebf2fe; /* Light blue background for 'In Progress' */
+  --status-in-progress-text: #4a60da; /* Darker blue text for 'In Progress' */
+  --status-complete-bg: #e9fcef; /* Light green background for 'Complete' */
+  --status-complete-text: #2cb167; /* Darker green text for 'Complete' */
+  --status-pending-bg: #fff7ec; /* Light orange background for 'Pending' */
+  --status-pending-text: #f0a500; /* Darker orange text for 'Pending' */
+  --status-approved-bg: #e9f0fe; /* Similar to in-progress, maybe a slightly different shade */
+  --status-approved-text: #4a60da; /* Text for 'Approved' */
+  --status-rejected-bg: #fdedee; /* Light red background for 'Rejected' */
+  --status-rejected-text: #d6394a; /* Darker red text for 'Rejected' */
+
+  /* Chart & Data Visualization Colors */
+  --chart-blue-1: #63b3ed; /* Main blue for charts */
+  --chart-blue-2: #3b82f6; /* Another blue shade for charts/lines */
+  --chart-grey: #d1d5db; /* Grey for inactive parts of charts */
+
+  /* Specific Components (e.g., Sidebar, Header) */
+  --sidebar-bg: #ffffff; /* Sidebar background */
+  --sidebar-item-hover-bg: #f1f3f9; /* Sidebar item hover */
+  --header-bg: #ffffff; /* Top header background */
+  --search-bg: #f1f3f9; /* Search input background */
+  --search-border: #e0e2e7; /* Search input border */
+
+  /* Dashboard Cards specific colors */
+  --card-positive-change: #2cb167; /* Green for positive change percentage */
+  --card-negative-change: #d6394a; /* Red for negative change percentage */
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+body.theme-dark {
+  /* General UI & Backgrounds */
+  --bg-primary: #1c1c1c; /* Main background color for the entire app */
+  --bg-secondary: #2b2d37; /* Background for sidebars, cards, and sections */
+  --bg-tertiary: #3a3d49; /* Slightly lighter background for some subtle differentiation (e.g., table header rows, hovered states) */
+  --border-color-default: #3a3d49; /* Default border color for inputs, cards, separators */
+  --border-color-subtle: #4d505c; /* Lighter borders for table rows or subtle dividers */
+
+  /* Text Colors */
+  --text-primary: #ebecef; /* Main body text, headings, primary labels */
+  --text-secondary: #a9b1bd; /* Secondary text, descriptions, inactive labels */
+  --text-tertiary: #7d8595; /* Placeholder text, very subtle labels, disabled text */
+  --text-link: #63b3ed; /* Link text color */
+
+  /* Action & Interactive Elements */
+  --interactive-primary: #4a60da; /* Primary interactive color (stays consistent where possible for branding) */
+  --interactive-hover: #5d75eb; /* Hover state for primary interactive elements */
+  --icon-default: #a9b1bd; /* Default icon color */
+  --icon-active: #ebecef; /* Active icon color */
+
+  /* Status Colors (for badges) */
+  /* These often remain similar to light theme to convey meaning, but backgrounds might be slightly different */
+  --status-in-progress-bg: #2b355b; /* Darker blue background for 'In Progress' */
+  --status-in-progress-text: #63b3ed; /* Lighter blue text for 'In Progress' */
+  --status-complete-bg: #2c4a3a; /* Darker green background for 'Complete' */
+  --status-complete-text: #2cb167; /* Green text for 'Complete' */
+  --status-pending-bg: #5b4e2b; /* Darker orange background for 'Pending' */
+  --status-pending-text: #f0a500; /* Orange text for 'Pending' */
+  --status-approved-bg: #2b355b; /* Similar to in-progress */
+  --status-approved-text: #63b3ed; /* Text for 'Approved' */
+  --status-rejected-bg: #4a2b2b; /* Darker red background for 'Rejected' */
+  --status-rejected-text: #d6394a; /* Red text for 'Rejected' */
+
+  /* Chart & Data Visualization Colors */
+  --chart-blue-1: #63b3ed; /* Main blue for charts */
+  --chart-blue-2: #4a60da; /* Another blue shade for charts/lines */
+  --chart-grey: #5c616b; /* Grey for inactive parts of charts */
+
+  /* Specific Components */
+  --sidebar-bg: #2b2d37; /* Sidebar background */
+  --sidebar-item-hover-bg: #3a3d49; /* Sidebar item hover */
+  --header-bg: #2b2d37; /* Top header background */
+  --search-bg: #3a3d49; /* Search input background */
+  --search-border: #4d505c; /* Search input border */
+
+  /* Dashboard Cards specific colors */
+  --card-positive-change: #2cb167; /* Green for positive change percentage */
+  --card-negative-change: #d6394a; /* Red for negative change percentage */
 }

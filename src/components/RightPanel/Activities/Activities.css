@@ -1,0 +1,70 @@
+.activities-panel {
+  padding: 16px;
+}
+
+.activities-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+.notification-panel {
+  padding: 8px 16px;
+}
+.activity-list-wrapper {
+  position: relative;
+}
+
+.activity-vertical-line {
+  position: absolute;
+  left: 12.5px;
+  top: 27px;
+  bottom: 13.5px;
+  width: 2px;
+  background-color: #000000;
+  opacity: 0.1;
+  z-index: 0;
+}
+
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  gap: 10px;
+}
+.notification-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--text-primary);
+}
+.notification-heading {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-primary);
+}
+.notification-time {
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.4;
+  color: var(--text-primary);
+}
+.activities-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  padding-top: 6px;
+  position: relative;
+  z-index: 1;
+  background-color: var(--bg-primary);
+}
+.notification-content {
+  display: flex;
+  gap: 4px;
+  flex-direction: column;
+}
+.notification-icon {
+  height: 27px;
+  z-index: 1;
+}
