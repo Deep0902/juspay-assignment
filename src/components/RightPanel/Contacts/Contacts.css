@@ -28,12 +28,7 @@
   font-weight: 400;
   color: var(--text-primary);
 }
-.notification-time {
-  font-size: 14px;
-  font-weight: 400;
-  opacity: 0.4;
-  color: var(--text-primary);
-}
+
 .contact-item {
   display: flex;
   align-items: center;

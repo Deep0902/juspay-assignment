@@ -3,6 +3,7 @@ import "./HomePage.css";
 import { useTheme } from "../../ThemeContext.jsx";
 import RightPanel from "../RightPanel/RightPanel.jsx";
 import LeftPanel from "../LeftPanel/LeftPanel.jsx";
+import DashboardMain from "./DashboardMain/DashboardMain.jsx";
 function HomePage() {
   const [leftPanelOpen, setLeftPanelOpen] = useState(false);
   const [rightPanelOpen, setRightPanelOpen] = useState(false);
@@ -97,59 +98,7 @@ function HomePage() {
 
         {/* Main Content */}
         <main className="content">
-          <div className="content-inner">
-            <div className="card">
-              <h2 className="card-title">Welcome to Your Dashboard</h2>
-              <p className="card-text">
-                This is the main content area. Use the buttons in the header to
-                toggle the left navigation and right filters panel. The layout
-                automatically adjusts to accommodate the open panels.
-              </p>
-
-              <div className="grid grid-md">
-                <div className="stat-card stat-card-blue">
-                  <h3 className="stat-title">Active Projects</h3>
-                  <p className="stat-value">12</p>
-                  <p className="stat-subtext">+3 from last week</p>
-                </div>
-
-                <div className="stat-card stat-card-green">
-                  <h3 className="stat-title">Completed Tasks</h3>
-                  <p className="stat-value">48</p>
-                  <p className="stat-subtext">+12 from last week</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="card">
-              <h3 className="activity-title">Recent Activity</h3>
-              <div className="activity-list">
-                <div className="activity-item">
-                  <div className="activity-dot activity-dot-blue"></div>
-                  <div className="activity-content">
-                    <p className="activity-text">New project created</p>
-                    <p className="activity-time">2 minutes ago</p>
-                  </div>
-                </div>
-
-                <div className="activity-item">
-                  <div className="activity-dot activity-dot-green"></div>
-                  <div className="activity-content">
-                    <p className="activity-text">Task completed</p>
-                    <p className="activity-time">1 hour ago</p>
-                  </div>
-                </div>
-
-                <div className="activity-item">
-                  <div className="activity-dot activity-dot-yellow"></div>
-                  <div className="activity-content">
-                    <p className="activity-text">Meeting scheduled</p>
-                    <p className="activity-time">3 hours ago</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <DashboardMain />
         </main>
       </div>
 
