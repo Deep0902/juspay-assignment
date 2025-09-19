@@ -1,0 +1,118 @@
+.pages-panel {
+  padding: 16px;
+}
+/* Sidebar Container */
+.sidebar-container {
+  width: 250px;
+  background-color: var(--bg-primary);
+  padding: 16px;
+  overflow: auto;
+}
+
+/* Section Headers */
+.section-header {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.section-header.first {
+  margin-top: 0;
+}
+
+.section-header.subsequent {
+  margin-top: 24px;
+}
+
+/* Menu Items */
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  margin-bottom: 2px;
+  border-radius: 12px;
+  transition: background-color 0.2s ease;
+  background-color: transparent;
+}
+
+.menu-item.expandable {
+  cursor: pointer;
+}
+
+.menu-item.active {
+  /* background-color: var(--bg-tertiary); */
+  background-color: var(--hover);
+  padding-left: 32px;
+}
+
+.menu-item:hover {
+  background-color: var(--hover);
+}
+
+/* Menu Item Icon */
+.menu-icon {
+  margin-right: 12px;
+  color: #374151;
+}
+
+/* Menu Item Label */
+.menu-label {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  color: var(--text-primary);
+  font-weight: 400;
+}
+
+.menu-label.active {
+  font-weight: 500;
+}
+
+/* Chevron Icon */
+.chevron-icon {
+  color: #6b7280;
+}
+
+/* Submenu Container */
+.submenu-container {
+  margin-left: 32px;
+  margin-bottom: 8px;
+  animation: slideDown 0.2s ease-out;
+}
+
+/* Submenu Items */
+.submenu-item {
+  padding: 6px 12px;
+  font-size: 14px;
+  color: var(--text-primary);
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  margin-bottom: 2px;
+}
+
+.submenu-item:hover {
+  background-color: var(--hover);
+}
+.rotate-45 {
+  transform: rotate(90deg);
+}
+/* Animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    max-height: 200px;
+    transform: translateY(0);
+  }
+}

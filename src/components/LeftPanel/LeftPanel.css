@@ -1,0 +1,41 @@
+.profile {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+.profile-name {
+  color: var(--text-primary);
+  font-weight: 400;
+  font-size: 20px;
+}
+.left-panel-content {
+  padding-left: 16px;
+  margin-top: 16px;
+}
+.toggle-switch {
+  color: var(--text-primary);
+  cursor: default;
+  margin: 20px 0 12px 0;
+  gap: 32px;
+  display: flex;
+  width: 100%;
+}
+
+.toggle-option {
+  cursor: pointer;
+  transition: color 0.2s, font-weight 0.2s;
+  color: var(--text-secondary);
+}
+
+.toggle-option.selected {
+  color: var(--text-tertiary);
+}
+.bullet-points ul {
+  margin: 0;
+  color: var(--text-primary);
+  padding: 0 20px;
+}
+.bullet-points li {
+  padding: 6px 0;
+}

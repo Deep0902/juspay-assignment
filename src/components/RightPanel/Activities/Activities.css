@@ -45,7 +45,7 @@
   color: var(--text-primary);
 }
 .notification-time {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   opacity: 0.4;
   color: var(--text-primary);
