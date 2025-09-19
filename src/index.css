@@ -3,6 +3,7 @@
   font-optical-sizing: auto;
   transition: all 0.4s cubic-bezier(0.68, -0.85, 0.27, 1.85);
 }
+
 body {
   margin: 0;
 }
@@ -13,11 +14,11 @@ body {
   --bg-tertiary: #f1f3f9; /* Lighter background for some subtle differentiation (e.g., table header rows, hovered states) */
   --border-color-default: #e0e2e7; /* Default border color for inputs, cards, separators */
   --border-color-subtle: #edf0f5; /* Very light borders for table rows or subtle dividers */
-
+  --hover: #1c1c1c0f;
   /* Text Colors */
-  --text-primary: #1c243b; /* Main body text, headings, primary labels */
-  --text-secondary: #747b89; /* Secondary text, descriptions, inactive labels */
-  --text-tertiary: #9aa1af; /* Placeholder text, very subtle labels, disabled text */
+  --text-primary: #1c1c1c; /* Main body text, headings, primary labels */
+  --text-secondary: #1c1c1c40; /* Secondary text, descriptions, inactive labels */
+  --text-tertiary: ##1c1c1c20; /* Placeholder text, very subtle labels, disabled text */
   --text-link: #3b82f6; /* Link text color (e.g., "See all") */
 
   /* Action & Interactive Elements */
@@ -93,6 +94,7 @@ body.theme-dark {
   --bg-tertiary: #3a3d49; /* Slightly lighter background for some subtle differentiation (e.g., table header rows, hovered states) */
   --border-color-default: #3a3d49; /* Default border color for inputs, cards, separators */
   --border-color-subtle: #4d505c; /* Lighter borders for table rows or subtle dividers */
+  --hover: #ffffff0f;
 
   /* Text Colors */
   --text-primary: #ebecef; /* Main body text, headings, primary labels */
@@ -134,4 +136,41 @@ body.theme-dark {
   /* Dashboard Cards specific colors */
   --card-positive-change: #2cb167; /* Green for positive change percentage */
   --card-negative-change: #d6394a; /* Red for negative change percentage */
+}
+
+/* Scrollbar */
+*::-webkit-scrollbar {
+  height: 10px;
+  width: 5px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: var(--bg-secondary, #f8f8fb);
+  opacity: 0.7;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: var(--bg-tertiary, #f1f3f9);
+  opacity: 0.85;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: var(--bg-primary, #ffffff);
+  opacity: 0.95;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: var(--text-secondary, #747b89);
+  opacity: 0.7;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-primary, #1c243b);
+  opacity: 0.85;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: var(--text-tertiary, #9aa1af);
+  opacity: 0.9;
 }

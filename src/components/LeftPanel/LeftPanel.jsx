@@ -1,9 +1,41 @@
+import { useState } from "react";
 import Dashboard from "./dashboard/dashboard";
 import "./LeftPanel.css";
 import Pages from "./pages/pages";
 function LeftPanel() {
+  const [selectedToggle, setSelectedToggle] = useState("Favourites");
   return (
     <>
+      <div className="left-panel-content">
+        <div className="profile">
+          <img src="/Profile.svg" alt="" />
+          <span className="profile-name">ByeWind</span>
+        </div>
+        <div className="toggle-switch">
+          <span
+            className={`toggle-option${
+              selectedToggle === "Favourites" ? " selected" : ""
+            }`}
+            onClick={() => setSelectedToggle("Favourites")}
+          >
+            Favourites
+          </span>
+          <span
+            className={`toggle-option${
+              selectedToggle === "Recently" ? " selected" : ""
+            }`}
+            onClick={() => setSelectedToggle("Recently")}
+          >
+            Recently
+          </span>
+        </div>
+        <div className="bullet-points">
+          <ul>
+            <li>Overview</li>
+            <li>Projects</li>
+          </ul>
+        </div>
+      </div>
       <Dashboard />
       <Pages />
     </>
