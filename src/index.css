@@ -2,7 +2,7 @@
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   transition: all 0.4s cubic-bezier(0.68, -0.85, 0.27, 1.85);
-  /* transition: all 0.4s ease-out; */
+  /* transition: all 0.2s ease-out; */
 }
 
 body {
@@ -16,6 +16,7 @@ body {
   --border-color-default: #e0e2e7;
   --border-color-subtle: #edf0f5;
   --hover: #1c1c1c0f;
+  --table-head: #f7f9fb;
   /* Text Colors */
   --text-primary: #1c1c1c;
   --text-secondary: #1c1c1c40;
@@ -49,7 +50,7 @@ body {
   --sidebar-bg: #ffffff;
   --sidebar-item-hover-bg: #f1f3f9;
   --header-bg: #ffffff;
-  --search-bg: #f1f3f9;
+  --search-bg: #fafbfd;
   --search-border: #e0e2e7;
 
   /* Dashboard Cards specific colors */
@@ -96,7 +97,7 @@ body.theme-dark {
   --border-color-default: #3a3d49;
   --border-color-subtle: #4d505c;
   --hover: #ffffff0f;
-
+  --table-head: #282828;
   /* Text Colors */
   --text-primary: #ebecef;
   --text-secondary: #a9b1bd;
@@ -129,7 +130,7 @@ body.theme-dark {
   --sidebar-bg: #2b2d37;
   --sidebar-item-hover-bg: #3a3d49;
   --header-bg: #2b2d37;
-  --search-bg: #3a3d49;
+  --search-bg: #232323;
   --search-border: #4d505c;
 
   /* Dashboard Cards specific colors */
