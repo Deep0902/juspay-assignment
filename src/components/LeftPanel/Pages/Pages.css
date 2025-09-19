@@ -11,11 +11,10 @@
 
 /* Section Headers */
 .section-header {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 500;
   color: var(--text-secondary);
   margin-bottom: 8px;
-  text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 12px;
 }

@@ -90,11 +90,9 @@ function HomePage() {
             <button className="menu-button" onClick={toggleRightPanel}>
               <img src={iconPath("Bell.svg")} alt="Bell" />
             </button>
-            {rightPanelOpen && (
-              <button onClick={toggleRightPanel} className="menu-button">
-                <img src={iconPath("Sidebar.svg")} alt="Sidebar" />
-              </button>
-            )}
+            <button onClick={toggleRightPanel} className="menu-button">
+              <img src={iconPath("Sidebar.svg")} alt="Sidebar" />
+            </button>
           </div>
         </header>
 
