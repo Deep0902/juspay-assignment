@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Dashboard from "./dashboard/dashboard";
+import Dashboard from "./Dashboard/Dashboard";
 import "./LeftPanel.css";
-import Pages from "./pages/pages";
+import Pages from "./Pages/Pages";
 function LeftPanel() {
   const [selectedToggle, setSelectedToggle] = useState("Favourites");
   return (
