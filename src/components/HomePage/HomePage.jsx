@@ -6,7 +6,7 @@ import LeftPanel from "../LeftPanel/LeftPanel.jsx";
 import DashboardMain from "./DashboardMain/DashboardMain.jsx";
 import TableFilter from "./TableFilter/TableFilter.jsx";
 function HomePage() {
-  const [leftPanelOpen, setLeftPanelOpen] = useState(false);
+  const [leftPanelOpen, setLeftPanelOpen] = useState(true);
   const [rightPanelOpen, setRightPanelOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
 

@@ -157,9 +157,6 @@ function TableFilter() {
       {/* Header with controls */}
       <div className="table-header">
         <div className="header-left">
-          {/* <button className="add-button" title="Add new row">
-            +
-          </button> */}
           <button className="menu-button">
             <img src={iconPath("Plus")} alt="Clock" onClick={handleAddRow} />
           </button>
@@ -169,12 +166,6 @@ function TableFilter() {
           <button className="menu-button">
             <img src={iconPath("ArrowsDownUp")} alt="Clock" />
           </button>
-          {/* <button className="filter-button" title="Filter">
-            ⋮
-          </button>
-          <button className="sort-button" title="Sort">
-            ⇅
-          </button> */}
         </div>
 
         <div className="header-right">

@@ -25,8 +25,6 @@ A modern, responsive React + Vite application with a beautiful UI, dark/light th
 - 🏎️ **Blazing Fast**  
   Built with Vite for instant hot reloads and speedy builds.
 
-- 📱 **Responsive Design**  
-  Looks great on desktop and mobile devices.
 
 ---
 
