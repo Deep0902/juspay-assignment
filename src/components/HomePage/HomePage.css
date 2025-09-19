@@ -10,7 +10,6 @@
 .left-panel {
   background-color: var(--bg-primary);
   border-right: 1px solid var(--border-color-default);
-  transition: width 0.3s ease-in-out;
   overflow: hidden;
   /* box-shadow left as is for now */
   backdrop-filter: blur(10px);
@@ -61,7 +60,6 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
-  transition: background-color 0.2s ease;
 }
 
 .close-button:hover {
@@ -83,7 +81,6 @@
   border-radius: 6px;
   color: var(--text-primary);
   text-decoration: none;
-  transition: all 0.2s ease;
   cursor: pointer;
 }
 
@@ -129,10 +126,11 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: all 0.4s ease;
 }
 
 .menu-button:hover {
+    scale: 1.1;
   background-color: var(--bg-tertiary);
 }
 
@@ -162,7 +160,6 @@
   outline: none;
   background: var(--search-bg);
   backdrop-filter: blur(5px);
-  transition: all 0.2s ease;
 }
 
 .search-input:focus {
@@ -200,7 +197,6 @@
   border: 1px solid var(--border-color-default);
   padding: 24px;
   margin-bottom: 24px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
@@ -240,7 +236,6 @@
   color: white;
   position: relative;
   overflow: hidden;
-  transition: transform 0.2s ease;
 }
 
 .stat-card:hover {
@@ -310,7 +305,6 @@
   background: var(--bg-tertiary);
   backdrop-filter: blur(5px);
   border-radius: 8px;
-  transition: all 0.2s ease;
 }
 
 .activity-item:hover {
@@ -357,7 +351,6 @@
   background: var(--bg-primary);
   backdrop-filter: blur(10px);
   border-left: 1px solid var(--border-color-default);
-  transition: width 0.3s ease-in-out;
   overflow: hidden;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
@@ -365,6 +358,7 @@
 
 .right-panel.open {
   width: 288px;
+  overflow: auto;
 }
 
 .right-panel.closed {
@@ -401,7 +395,6 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  transition: color 0.2s ease;
 }
 
 .checkbox-label:hover {
@@ -412,7 +405,6 @@
   border-radius: 4px;
   border: 1px solid #d1d5db;
   color: #2563eb;
-  transition: all 0.2s ease;
 }
 
 .checkbox:focus {
@@ -433,7 +425,6 @@
   outline: none;
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(5px);
-  transition: all 0.2s ease;
 }
 
 .select:focus {
@@ -452,7 +443,6 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  transition: color 0.2s ease;
 }
 
 .radio-label:hover {
@@ -462,7 +452,6 @@
 .radio {
   border: 1px solid #d1d5db;
   color: #2563eb;
-  transition: all 0.2s ease;
 }
 
 .radio:focus {
@@ -488,7 +477,6 @@
   border-radius: 8px;
   border: none;
   cursor: pointer;
-  transition: all 0.2s ease;
   margin-top: 16px;
   padding-top: 16px;
   border-top: 1px solid var(--border-color-default);
@@ -529,7 +517,6 @@
   background: var(--bg-tertiary);
   backdrop-filter: blur(5px);
   border-radius: 8px;
-  transition: all 0.2s ease;
 }
 
 .recent-item:hover {
