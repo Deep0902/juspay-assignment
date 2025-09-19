@@ -40,7 +40,7 @@ function HomePage() {
 
           <div className="header-right">
             <div className="search-container">
-              <img src="/Search.svg" alt="" className="search-icon" />
+              <img src={iconPath("Search.svg")} alt="" className="search-icon" />
               <input
                 type="text"
                 placeholder="Search..."

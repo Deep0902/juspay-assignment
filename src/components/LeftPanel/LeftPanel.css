@@ -1,7 +1,6 @@
 .profile {
   display: flex;
   align-items: center;
-
   gap: 12px;
 }
 .profile-name {
@@ -24,7 +23,6 @@
 
 .toggle-option {
   cursor: pointer;
-  transition: color 0.2s, font-weight 0.2s;
   color: var(--text-secondary);
 }
 
