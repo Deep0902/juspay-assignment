@@ -135,8 +135,12 @@ h2 {
   border-bottom: 1px solid #00000005;
   vertical-align: middle;
   background-color: var(--bg-primary);
+  transition: all 0.2s ease-out;
 }
 
+.data-table tr:hover td {
+  transition: all 0.2s ease-out;
+}
 .data-table tr:hover td {
   background-color: var(--hover);
 }
