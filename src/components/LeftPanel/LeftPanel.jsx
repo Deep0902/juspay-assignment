@@ -1,5 +1,12 @@
-import "./LeftPanel.css"
+import Dashboard from "./dashboard/dashboard";
+import "./LeftPanel.css";
+import Pages from "./pages/pages";
 function LeftPanel() {
-  return <h1>This is light panel</h1>;
+  return (
+    <>
+      <Dashboard />
+      <Pages />
+    </>
+  );
 }
 export default LeftPanel;
