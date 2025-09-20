@@ -1,8 +1,10 @@
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
 import { totalSalesData } from "../../../../data/barChartData";
 import "./SalesDoughnutChart.css";
+import { useTheme } from "../../../../ThemeContext";
 
 const SalesDoughnutChart = () => {
+  const { theme } = useTheme();
   return (
     <div className="sales-chart-container">
       <h3 className="sales-chart-title">Total Sales</h3>
@@ -23,9 +25,13 @@ const SalesDoughnutChart = () => {
                 cornerRadius={6}
                 startAngle={90}
                 endAngle={-270}
+                stroke="none"
               >
                 {totalSalesData.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={entry.color} />
+                  <Cell
+                    key={`cell-${index}`}
+                    fill={theme === "dark" ? entry.colorDark : entry.color}
+                  />
                 ))}
               </Pie>
             </PieChart>
@@ -37,7 +43,10 @@ const SalesDoughnutChart = () => {
             <div className="sales-legend-item" key={`legend-${index}`}>
               <span
                 className="sales-legend-dot"
-                style={{ backgroundColor: entry.color }}
+                style={{
+                  backgroundColor:
+                    theme === "dark" ? entry.colorDark : entry.color,
+                }}
               ></span>
               <span className="sales-legend-label">{entry.name}</span>
               <span className="sales-legend-value">

@@ -55,9 +55,13 @@
   align-items: flex-start;
   gap: 6px;
   padding-top: 6px;
+  cursor: default;
   position: relative;
   z-index: 1;
   background-color: var(--bg-primary);
+}
+.activities-item:hover {
+  scale: 1.03;
 }
 .notification-content {
   display: flex;
