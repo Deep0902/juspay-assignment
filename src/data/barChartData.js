@@ -1,33 +1,33 @@
 const barChartData = [
   {
     month: "Jan",
-    projections: 18,
-    actuals: 16,
+    Projections: 4,
+    Actuals: 17,
   },
   {
     month: "Feb",
-    projections: 25,
-    actuals: 22,
+    Projections: 5,
+    Actuals: 22,
   },
   {
     month: "Mar",
-    projections: 22,
-    actuals: 18,
+    Projections: 4,
+    Actuals: 18,
   },
   {
     month: "Apr",
-    projections: 27,
-    actuals: 24,
+    Projections: 7,
+    Actuals: 22,
   },
   {
     month: "May",
-    projections: 18,
-    actuals: 15,
+    Projections: 4,
+    Actuals: 15,
   },
   {
     month: "Jun",
-    projections: 25,
-    actuals: 22,
+    Projections: 5,
+    Actuals: 21,
   },
 ];
 export default barChartData;
