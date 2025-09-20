@@ -5,12 +5,12 @@ import RightPanel from "../RightPanel/RightPanel.jsx";
 import LeftPanel from "../LeftPanel/LeftPanel.jsx";
 import DashboardMain from "./DashboardMain/DashboardMain.jsx";
 import TableFilter from "./TableFilter/TableFilter.jsx";
+import { getIconPath } from "../../util/commonFunctions";
 function HomePage() {
-  const [leftPanelOpen, setLeftPanelOpen] = useState(false);
+  const [leftPanelOpen, setLeftPanelOpen] = useState(true);
   const [rightPanelOpen, setRightPanelOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
-
-  const iconPath = (iconName) => `/${theme}/${iconName}`;
+  const [useTable, setUseTable] = useState(false); // Toggle this to show TableFilter or DashboardMain
 
   const toggleLeftPanel = () => setLeftPanelOpen(!leftPanelOpen);
   const toggleRightPanel = () => setRightPanelOpen(!rightPanelOpen);
@@ -28,10 +28,14 @@ function HomePage() {
         <header className="header">
           <div className="header-left">
             <button onClick={toggleLeftPanel} className="menu-button">
-              <img src={iconPath("Sidebar.svg")} alt="Sidebar" />
+              <img src={getIconPath("Sidebar.svg", theme)} alt="Sidebar" />
             </button>
             <button className="menu-button">
-              <img src={iconPath("Star.svg")} alt="Star" />
+              <img
+                src={getIconPath("Star.svg", theme)}
+                alt="Star"
+                onClick={() => setUseTable((prev) => !prev)}
+              />
             </button>
             <h1 className="title opacity-40">Dashboards</h1>
             <h1 className="title opacity-40">/</h1>
@@ -40,7 +44,11 @@ function HomePage() {
 
           <div className="header-right">
             <div className="search-container">
-              <img src={iconPath("Search.svg")} alt="" className="search-icon" />
+              <img
+                src={getIconPath("Search.svg", theme)}
+                alt=""
+                className="search-icon"
+              />
               <input
                 type="text"
                 placeholder="Search..."
@@ -48,23 +56,26 @@ function HomePage() {
               />
             </div>
             <button className="menu-button" onClick={toggleTheme}>
-              <img src={iconPath("Sun.svg")} alt="Sun" />
+              <img src={getIconPath("Sun.svg", theme)} alt="Sun" />
             </button>
             <button className="menu-button">
-              <img src={iconPath("ClockCounterClockwise.svg")} alt="Clock" />
+              <img
+                src={getIconPath("ClockCounterClockwise.svg", theme)}
+                alt="Clock"
+              />
             </button>
             <button className="menu-button" onClick={toggleRightPanel}>
-              <img src={iconPath("Bell.svg")} alt="Bell" />
+              <img src={getIconPath("Bell.svg", theme)} alt="Bell" />
             </button>
             <button onClick={toggleRightPanel} className="menu-button">
-              <img src={iconPath("Sidebar.svg")} alt="Sidebar" />
+              <img src={getIconPath("Sidebar.svg", theme)} alt="Sidebar" />
             </button>
           </div>
         </header>
 
         {/* Main Content */}
         <main className="content">
-          <TableFilter />
+          {useTable ? <TableFilter /> : <DashboardMain />}
         </main>
       </div>
 

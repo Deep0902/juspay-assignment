@@ -1,7 +1,6 @@
-import React from "react";
-import "./Activities.css";
-import { truncateText } from "../../../util/commonFunctions";
 import activities from "../../../data/activities";
+import { truncateText } from "../../../util/commonFunctions";
+import "./Activities.css";
 function Activities() {
   return (
     <div className="activities-panel">

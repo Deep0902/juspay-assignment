@@ -1,0 +1,46 @@
+.bar-chart-container {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.chart-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  margin-left: 0;
+}
+
+.chart-wrapper {
+  width: 100%;
+  height: 200px;
+}
+
+.tooltip-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 4px;
+}
+
+.tooltip-item {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  margin: 2px 0;
+}
+
+.tooltip-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  margin-right: 8px;
+}
+
+.tooltip-value {
+  font-weight: 500;
+  margin-left: auto;
+}

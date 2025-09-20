@@ -7,10 +7,7 @@ function Contacts() {
       <h2 className="contacts-title">Contacts</h2>
       <div className="notification-list">
         {contacts.map((notif, idx) => (
-          <div
-            className={`contact-item notification-${notif.type}`}
-            key={idx}
-          >
+          <div className={`contact-item notification-${notif.type}`} key={idx}>
             <img
               src={`/contacts/Contact${notif.user}.svg`}
               alt={notif.type}
