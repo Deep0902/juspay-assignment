@@ -20,7 +20,9 @@ const ProjectionsActuals = ({
 
   return (
     <div className="bar-chart-container">
-      <h3 className="chart-title">{title}</h3>
+      <h3 className="chart-title" style={{ paddingTop: "12px" }}>
+        {title}
+      </h3>
 
       <div
         className="chart-wrapper"
