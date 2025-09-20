@@ -41,11 +41,24 @@
 }
 
 .menu-item.active {
-  /* background-color: var(--bg-tertiary); */
   background-color: var(--hover);
   padding-left: 32px;
+  position: relative;
 }
 
+.menu-item.active::before {
+  content: "";
+  position: absolute;
+  left: 1px;
+  top: 8px;
+  bottom: 8px;
+  width: 5px;
+  border-radius: 4px;
+  background: var(--text-primary);
+  height: calc(
+    100% - 16px
+  ); 
+}
 .menu-item:hover {
   background-color: var(--hover);
 }

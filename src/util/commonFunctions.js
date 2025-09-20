@@ -23,3 +23,11 @@ export function generateNewRow(currentData, statusOptions, projectOptions) {
     status: "In Progress",
   };
 }
+
+export function iconPath(iconName, theme) {
+  return `/${theme}/${iconName}`;
+}
+
+export function getIconPath(iconName, theme) {
+  return iconPath(iconName, theme);
+}

@@ -137,6 +137,9 @@ h2 {
   background-color: var(--bg-primary);
   transition: all 0.2s ease-out;
 }
+.data-table th{
+    border-radius: 8px;
+}
 
 .data-table tr:hover td {
   transition: all 0.2s ease-out;

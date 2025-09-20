@@ -154,6 +154,8 @@ function TableFilter() {
 
   return (
     <div className="data-table-container">
+      <h2 className="activities-title">Order List</h2>
+      <br />
       {/* Header with controls */}
       <div className="table-header">
         <div className="header-left">
