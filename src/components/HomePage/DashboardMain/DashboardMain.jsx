@@ -5,6 +5,7 @@ import barChartData from "../../../data/barChartData";
 import RevenueChart from "./RevenueChart/RevenueChart";
 import SalesDoughnutChart from "./SalesDoughnutChart/SalesDoughnutChart";
 import RevenueByLocation from "./RevenueByLocation/RevenueByLocation";
+import TopSellingProducts from "./TopSellingProducts/TopSellingProducts";
 
 function DashboardMain() {
   return (
@@ -30,7 +31,7 @@ function DashboardMain() {
         </div>
       </div>
       <div className="sales-section">
-        <div className="sales-table"></div>
+        <div className="sales-table"><TopSellingProducts/></div>
         <div className="sales-total">
           <SalesDoughnutChart />
         </div>

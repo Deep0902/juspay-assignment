@@ -22,3 +22,9 @@ h1 {
 .chart-revenue {
   flex: 1;
 }
+.sales-section {
+  display: flex;
+}
+.sales-table {
+  flex: 1;
+}
