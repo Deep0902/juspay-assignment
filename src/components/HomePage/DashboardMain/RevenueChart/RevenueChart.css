@@ -1,0 +1,64 @@
+.revenue-chart-container {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin: 40px auto;
+}
+
+.chart-header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.chart-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  color: #121212;
+}
+
+.legend {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #606060;
+}
+
+.legend-item .label {
+  font-weight: 500;
+}
+
+.legend-item .value {
+  font-weight: 600;
+  color: #121212;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.dot.current {
+  background-color: #121212;
+}
+
+.dot.previous {
+  background-color: #b0c4de;
+}
+
+.recharts-wrapper .recharts-surface {
+  margin-top: 15px; /* Adjusts position of the chart for the custom header */
+}

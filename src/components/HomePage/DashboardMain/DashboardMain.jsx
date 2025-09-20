@@ -2,6 +2,7 @@ import "./DashboardMain.css";
 import ProjectionsActuals from "./ProjectionsActuals/ProjectionsActuals";
 import StatsCards from "./StatsCards/StatsCards";
 import barChartData from "../../../data/barChartData";
+import RevenueChart from "./RevenueChart/RevenueChart";
 
 function DashboardMain() {
   return (
@@ -17,6 +18,12 @@ function DashboardMain() {
             title="Projections vs Actuals"
           />
         </div>
+      </div>
+      <div className="revenue-charts-container">
+        <div className="chart-revenue">
+          <RevenueChart />
+        </div>
+        <div className="revenue-by-location"></div>
       </div>
     </>
   );

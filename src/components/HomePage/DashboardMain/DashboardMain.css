@@ -16,3 +16,9 @@ h1 {
 .test1 {
   flex: 1;
 }
+.revenue-charts-container {
+  display: flex;
+}
+.chart-revenue{
+    
+}
