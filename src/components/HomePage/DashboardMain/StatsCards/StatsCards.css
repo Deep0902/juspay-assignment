@@ -20,7 +20,8 @@
   background-color: #e3e5ff;
 }
 .card-color-2 {
-  background-color: #f7f9fb;
+  background-color: var(--card-bg);
+  color: var(--text-primary);
 }
 .card-color-3 {
   background-color: #e5ecf6;

@@ -14,7 +14,7 @@ const RevenueChart = () => {
     <div className="revenue-chart-container">
       <div className="chart-header">
         <h3 className="chart-title">Revenue</h3>
-        <span>|</span>
+        <span className="divider">|</span>
         <div className="legend">
           <div className="legend-item">
             <span className="dot current"></span>
@@ -51,7 +51,7 @@ const RevenueChart = () => {
           <Line
             type="monotone"
             dataKey="Current"
-            stroke="#121212"
+            stroke="var(--previous-line)"
             strokeWidth={3}
             dot={false}
             strokeDasharray="5 5"
@@ -59,7 +59,7 @@ const RevenueChart = () => {
           <Line
             type="monotone"
             dataKey="Previous"
-            stroke="#b0c4de"
+            stroke="#a8c5da"
             strokeWidth={3}
             dot={false}
           />

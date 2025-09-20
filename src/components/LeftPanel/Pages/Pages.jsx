@@ -4,10 +4,8 @@ import { pagesMenuItems } from "../../../data/leftPanel";
 import { useTheme } from "../../../ThemeContext";
 
 function Pages() {
-  const [expandedItems, setExpandedItems] = useState({
-    userProfile: true, // Start with User Profile expanded
-  });
-  const { theme, toggleTheme } = useTheme();
+  const [expandedItems, setExpandedItems] = useState({}); // No expanded by default
+  const { theme } = useTheme();
 
   const iconPath = (iconName) => `/${theme}/${iconName}.svg`;
   const toggleExpanded = (itemKey) => {

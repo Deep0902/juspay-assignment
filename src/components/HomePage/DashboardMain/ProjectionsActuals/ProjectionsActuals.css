@@ -1,6 +1,6 @@
 /* Bar Chart Container */
 .bar-chart-container {
-  background: #F7F9FB;
+  background: var(--card-bg);
   border-radius: 12px;
   padding: 24px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -14,7 +14,7 @@
 .chart-title {
   font-size: 18px;
   font-weight: 600;
-  color: #1a1a1a;
+  color: var(--text-primary);
   margin-bottom: 20px;
   margin-left: 0;
 }

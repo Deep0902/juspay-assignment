@@ -15,7 +15,7 @@ function RevenueByLocation() {
   return (
     <div className="location-card">
       <h2 className="location-title">Revenue by Location</h2>
-      <img src={getIconPath("WorldMap.svg", theme)} alt="WorldMap" />
+      <img className="map" src={getIconPath("WorldMap.svg", theme)} alt="WorldMap" />
       <div>
         {locations.map((location) => (
           <div className="location-row" key={location.name}>

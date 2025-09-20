@@ -1,15 +1,13 @@
 .tsp-card {
-  background: #f9f9fb;
+  background: var(--card-bg);
   border-radius: 18px;
   padding: 28px 24px 32px 24px;
-  margin: 14px auto;
-  font-family: "Inter", Arial, sans-serif;
 }
 
 .tsp-title {
   font-size: 18px;
   font-weight: 600;
-  color: #23223e;
+  color: var(--text-primary);
   margin-bottom: 18px;
 }
 
@@ -28,10 +26,12 @@
 .tsp-table td {
   padding: 12px 8px;
   text-align: left;
+  /* #95999D */
+  color: var(--text-primary);
 }
 
 .tsp-table th {
-  color: #bdbec4;
+  color: var(--top-selling-header);
   font-weight: 500;
   font-size: 15px;
   border-bottom: 2px solid #e6e6e9;
@@ -39,13 +39,8 @@
 }
 
 .tsp-table td {
-  color: #33343a;
+  color: var(--text-primary);
   font-size: 16px;
   font-weight: 400;
-  border-bottom: 1px solid #f1f2f3;
   background: transparent;
-}
-
-.tsp-table tr:last-child td {
-  border-bottom: none;
 }

@@ -42,8 +42,8 @@ export const revenueData = [
 ];
 
 export const totalSalesData = [
-  { name: "Direct", value: 300.56, color: "#121212" },
-  { name: "Affiliate", value: 135.18, color: "#c3f2d2" }, // Light green
-  { name: "Sponsored", value: 154.02, color: "#b0c4de" }, // Light blue
-  { name: "E-mail", value: 48.96, color: "#d2ebfc" }, // Very light blue
+  { name: "Direct", value: 300.56, color: "#1c1c1c" },
+  { name: "Affiliate", value: 135.18, color: "#BAEDBD" }, // Light green
+  { name: "Sponsored", value: 154.02, color: "#B1E3FF" }, // Light blue
+  { name: "E-mail", value: 48.96, color: "#95A4FC" }, // Very light blue
 ];
