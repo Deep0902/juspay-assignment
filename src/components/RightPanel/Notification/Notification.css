@@ -21,8 +21,12 @@
 
 .notification-item {
   display: flex;
+  cursor: default;
   align-items: flex-start;
   gap: 12px;
+}
+.notification-item:hover {
+  scale: 1.03;
 }
 .notification-content {
   display: flex;

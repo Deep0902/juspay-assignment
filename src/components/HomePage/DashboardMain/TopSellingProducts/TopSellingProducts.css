@@ -4,6 +4,9 @@
   padding: 28px 24px 32px 24px;
   height: 100%;
 }
+.tsp-card:hover {
+  scale: 1.03;
+}
 
 .tsp-title {
   margin-top: 0;

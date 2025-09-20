@@ -5,6 +5,9 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   width: 100%;
 }
+.bar-chart-container:hover {
+  scale: 1.05;
+}
 
 .chart-title {
   font-size: 18px;

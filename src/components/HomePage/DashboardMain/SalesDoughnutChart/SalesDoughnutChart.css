@@ -5,8 +5,11 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
-  min-width: 300px;
+  min-width: 200px;
   align-items: flex-start;
+}
+.sales-chart-container:hover {
+  scale: 1.03;
 }
 .recharts-wrapper .recharts-surface {
   margin-top: 0 !important;
