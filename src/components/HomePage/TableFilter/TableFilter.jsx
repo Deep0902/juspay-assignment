@@ -1,11 +1,7 @@
-import { useMemo, useState } from "react";
-import {
-  tableData,
-  statusOptions,
-  projectOptions,
-} from "../../../data/tableData";
-import { generateNewRow } from "../../../util/commonFunctions";
+import { memo, useMemo, useState } from "react";
+import { projectOptions, tableData } from "../../../data/tableData";
 import { useTheme } from "../../../ThemeContext";
+import { generateNewRow } from "../../../util/commonFunctions";
 import "./TableFilter.css";
 function TableFilter() {
   const [data, setData] = useState(tableData);
@@ -14,10 +10,10 @@ function TableFilter() {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedRows, setSelectedRows] = useState(new Set());
   const itemsPerPage = 10;
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
   const iconPath = (iconName) => `/${theme}/${iconName}.svg`;
 
-  // Filter data based on search term
+  // #region Filter Data
   const filteredData = useMemo(() => {
     if (!searchTerm) return data;
 
@@ -31,7 +27,7 @@ function TableFilter() {
     );
   }, [data, searchTerm]);
 
-  // Sort data
+  // #region Sort data
   const sortedData = useMemo(() => {
     if (!sortConfig.key) return filteredData;
 
@@ -62,16 +58,15 @@ function TableFilter() {
     });
   }, [filteredData, sortConfig]);
 
-  // Paginate data
+  // #region Paginate data
   const paginatedData = useMemo(() => {
     const startIndex = (currentPage - 1) * itemsPerPage;
     return sortedData.slice(startIndex, startIndex + itemsPerPage);
   }, [sortedData, currentPage, itemsPerPage]);
 
-  // Calculate total pages
   const totalPages = Math.ceil(sortedData.length / itemsPerPage);
 
-  // Handle sorting
+  // #region sorting
   const handleSort = (key) => {
     let direction = "asc";
     if (sortConfig.key === key && sortConfig.direction === "asc") {
@@ -80,23 +75,23 @@ function TableFilter() {
     setSortConfig({ key, direction });
   };
 
-  // Handle search
+  // #region search
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
     setCurrentPage(1); // Reset to first page when searching
   };
 
-  // Handle add new row
+  // #region add new row
   const handleAddRow = () => {
     setData((prevData) => {
-      const newRow = generateNewRow(prevData, statusOptions, projectOptions);
+      const newRow = generateNewRow(prevData, projectOptions);
       const newData = [...prevData, newRow];
       setCurrentPage(Math.ceil(newData.length / itemsPerPage));
       return newData;
     });
   };
 
-  // Handle row selection
+  //#region Selection
   const handleRowSelect = (id) => {
     const newSelectedRows = new Set(selectedRows);
     if (newSelectedRows.has(id)) {
@@ -107,7 +102,6 @@ function TableFilter() {
     setSelectedRows(newSelectedRows);
   };
 
-  // Handle select all
   const handleSelectAll = () => {
     if (selectedRows.size === paginatedData.length) {
       setSelectedRows(new Set());
@@ -116,12 +110,10 @@ function TableFilter() {
     }
   };
 
-  // Get status badge class
   const getStatusClass = (status) => {
     return status.toLowerCase().replace(" ", "-");
   };
 
-  // Render sort indicator
   const renderSortIndicator = (key) => {
     if (sortConfig.key !== key) {
       return <span className="sort-indicator">↕</span>;
@@ -133,7 +125,6 @@ function TableFilter() {
     );
   };
 
-  // Generate page numbers
   const getPageNumbers = () => {
     const pageNumbers = [];
     const maxVisiblePages = 5;
@@ -154,12 +145,10 @@ function TableFilter() {
 
   return (
     <div className="data-table-container">
-      {/* Header with controls */}
+      <h2 className="activities-title">Order List</h2>
+      <br />
       <div className="table-header">
         <div className="header-left">
-          {/* <button className="add-button" title="Add new row">
-            +
-          </button> */}
           <button className="menu-button">
             <img src={iconPath("Plus")} alt="Clock" onClick={handleAddRow} />
           </button>
@@ -169,12 +158,6 @@ function TableFilter() {
           <button className="menu-button">
             <img src={iconPath("ArrowsDownUp")} alt="Clock" />
           </button>
-          {/* <button className="filter-button" title="Filter">
-            ⋮
-          </button>
-          <button className="sort-button" title="Sort">
-            ⇅
-          </button> */}
         </div>
 
         <div className="header-right">
@@ -330,4 +313,4 @@ function TableFilter() {
     </div>
   );
 }
-export default TableFilter;
+export default memo(TableFilter);

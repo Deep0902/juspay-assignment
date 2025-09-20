@@ -1,3 +1,35 @@
 h1 {
   color: var(--text-primary);
 }
+.stat-card-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 16px;
+  color: var(--text-primary);
+  justify-content: center;
+  align-items: center;
+}
+.test {
+  display: flex;
+  gap: 28px;
+}
+.test1 {
+  flex: 1;
+}
+.revenue-charts-container {
+  margin: 28px 0;
+  display: flex;
+  gap: 28px;
+}
+.chart-revenue {
+  flex: 1;
+}
+.sales-section {
+  margin: 28px 0;
+  display: flex;
+  gap: 28px;
+}
+.sales-table {
+  flex: 1;
+}

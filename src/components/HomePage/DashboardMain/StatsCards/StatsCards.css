@@ -1,0 +1,50 @@
+.card:nth-child(odd) {
+  justify-self: end;
+}
+
+.card:nth-child(even) {
+  justify-self: start;
+}
+.card {
+  color: #1c1c1c;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 16px 28px;
+  height: 100%;
+  width: 100%;
+}
+.card:hover {
+  scale: 1.05;
+}
+.card-color-1 {
+  background-color: #e3e5ff;
+}
+.card-color-2 {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+}
+.card-color-3 {
+  background-color: #e5ecf6;
+}
+.heading {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.numbers {
+  gap: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.value {
+  font-size: 24px;
+  font-weight: 600;
+}
+.percentage {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}

@@ -1,146 +1,18 @@
 * {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  transition: all 0.4s cubic-bezier(0.68, -0.85, 0.27, 1.85);
-  /* transition: all 0.2s ease-out; */
+  /* transition: all 0.4s cubic-bezier(0.68, -0.85, 0.27, 1.85); */
+  transition: all 0.2s ease-out;
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
-}
-:root {
-  /* General UI & Backgrounds */
-  --bg-primary: #ffffff;
-  --bg-secondary: #f8f8fb;
-  --bg-tertiary: #f1f3f9;
-  --border-color-default: #e0e2e7;
-  --border-color-subtle: #edf0f5;
-  --hover: #1c1c1c0f;
-  --table-head: #f7f9fb;
-  /* Text Colors */
-  --text-primary: #1c1c1c;
-  --text-secondary: #1c1c1c40;
-  --text-tertiary: ##1c1c1c20;
-  --text-link: #3b82f6;
-
-  /* Action & Interactive Elements */
-  --interactive-primary: #4a60da;
-  --interactive-hover: #5d75eb;
-  --icon-default: #747b89;
-  --icon-active: #1c243b;
-
-  /* Status Colors (for badges) */
-  --status-in-progress-bg: #ebf2fe;
-  --status-in-progress-text: #4a60da;
-  --status-complete-bg: #e9fcef;
-  --status-complete-text: #2cb167;
-  --status-pending-bg: #fff7ec;
-  --status-pending-text: #f0a500;
-  --status-approved-bg: #e9f0fe;
-  --status-approved-text: #4a60da;
-  --status-rejected-bg: #fdedee;
-  --status-rejected-text: #d6394a;
-
-  /* Chart & Data Visualization Colors */
-  --chart-blue-1: #63b3ed;
-  --chart-blue-2: #3b82f6;
-  --chart-grey: #d1d5db;
-
-  /* Specific Components (e.g., Sidebar, Header) */
-  --sidebar-bg: #ffffff;
-  --sidebar-item-hover-bg: #f1f3f9;
-  --header-bg: #ffffff;
-  --search-bg: #fafbfd;
-  --search-border: #e0e2e7;
-
-  /* Dashboard Cards specific colors */
-  --card-positive-change: #2cb167;
-  --card-negative-change: #d6394a;
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
-}
-body.theme-dark {
-  /* General UI & Backgrounds */
-  --bg-primary: #1c1c1c;
-  --bg-secondary: #2b2d37;
-  --bg-tertiary: #3a3d49;
-  --border-color-default: #3a3d49;
-  --border-color-subtle: #4d505c;
-  --hover: #ffffff0f;
-  --table-head: #282828;
-  /* Text Colors */
-  --text-primary: #ebecef;
-  --text-secondary: #a9b1bd;
-  --text-tertiary: #7d8595;
-  --text-link: #63b3ed;
-
-  /* Action & Interactive Elements */
-  --interactive-primary: #4a60da;
-  --interactive-hover: #5d75eb;
-  --icon-default: #a9b1bd;
-  --icon-active: #ebecef;
-
-  --status-in-progress-bg: #2b355b;
-  --status-in-progress-text: #63b3ed;
-  --status-complete-bg: #2c4a3a;
-  --status-complete-text: #2cb167;
-  --status-pending-bg: #5b4e2b;
-  --status-pending-text: #f0a500;
-  --status-approved-bg: #2b355b;
-  --status-approved-text: #63b3ed;
-  --status-rejected-bg: #4a2b2b;
-  --status-rejected-text: #d6394a;
-
-  /* Chart & Data Visualization Colors */
-  --chart-blue-1: #63b3ed;
-  --chart-blue-2: #4a60da;
-  --chart-grey: #5c616b;
-
-  /* Specific Components */
-  --sidebar-bg: #2b2d37;
-  --sidebar-item-hover-bg: #3a3d49;
-  --header-bg: #2b2d37;
-  --search-bg: #232323;
-  --search-border: #4d505c;
-
-  /* Dashboard Cards specific colors */
-  --card-positive-change: #2cb167;
-  --card-negative-change: #d6394a;
+  padding: 0;
 }
 
-/* Scrollbar */
 *::-webkit-scrollbar {
-  height: 10px;
+  height: 5px;
   width: 5px;
 }
 *::-webkit-scrollbar-track {

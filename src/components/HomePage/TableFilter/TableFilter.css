@@ -1,11 +1,11 @@
 h2 {
   color: var(--text-primary);
 }
-/* Container */
+
 .data-table-container {
   background: var(--bg-primary);
 }
-/* Header Controls */
+
 .table-header {
   background-color: var(--hover);
   display: flex;
@@ -29,7 +29,6 @@ h2 {
   gap: 12px;
 }
 
-/* Buttons */
 .add-button {
   display: flex;
   align-items: center;
@@ -64,7 +63,6 @@ h2 {
   background: #e9ecef;
 }
 
-/* Search Input */
 .search-container-table {
   position: relative;
   background-color: var(--table-head);
@@ -78,10 +76,13 @@ h2 {
   background: var(--search-bg);
   width: 200px;
   outline: none;
+  color: var(--text-primary);
 }
 
-.search-input:focus {
-  border-color: var(--bg-tertiary);
+.search-input-table:focus {
+  border-color: var(--border-color-default);
+  box-shadow: 0 0 0 2px var(--interactive-primary);
+  background: var(--bg-primary);
 }
 
 .search-icon {
@@ -92,7 +93,6 @@ h2 {
   color: #6c757d;
 }
 
-/* Table */
 .data-table {
   width: 100%;
   border-collapse: collapse;
@@ -137,6 +137,9 @@ h2 {
   background-color: var(--bg-primary);
   transition: all 0.2s ease-out;
 }
+.data-table th {
+  border-radius: 8px;
+}
 
 .data-table tr:hover td {
   transition: all 0.2s ease-out;
@@ -145,21 +148,18 @@ h2 {
   background-color: var(--hover);
 }
 
-/* Checkbox */
 .checkbox {
   width: 16px;
   height: 16px;
   accent-color: #007bff;
 }
 
-/* User Cell */
 .user-cell {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
-/* Status Badge */
 .status-badge {
   display: inline-flex;
   align-items: center;
@@ -218,7 +218,6 @@ h2 {
   opacity: 0.4;
 }
 
-/* Date Cell */
 .date-cell {
   display: flex;
   align-items: center;
@@ -226,7 +225,6 @@ h2 {
   color: #6c757d;
 }
 
-/* Actions */
 .actions-cell {
   text-align: right;
 }
@@ -244,7 +242,6 @@ h2 {
   background-color: var(--hover);
 }
 
-/* Pagination */
 .pagination {
   display: flex;
   justify-content: flex-end;
@@ -280,14 +277,6 @@ h2 {
   background-color: var(--hover);
 }
 
-/* Loading State */
-.loading {
-  text-align: center;
-  padding: 40px;
-  color: #6c757d;
-}
-
-/* No Results */
 .no-results {
   text-align: center;
   padding: 40px;

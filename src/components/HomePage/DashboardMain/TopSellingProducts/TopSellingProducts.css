@@ -1,0 +1,47 @@
+.tsp-card {
+  background: var(--card-bg);
+  border-radius: 18px;
+  padding: 28px 24px 32px 24px;
+  height: 100%;
+}
+
+.tsp-title {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 18px;
+}
+
+.tsp-table-wrap {
+  overflow-x: auto;
+}
+
+.tsp-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 480px;
+  background: transparent;
+}
+
+.tsp-table th,
+.tsp-table td {
+  padding: 12px 8px;
+  text-align: left;
+  color: var(--text-primary);
+}
+
+.tsp-table th {
+  color: var(--top-selling-header);
+  font-weight: 500;
+  font-size: 15px;
+  border-bottom: 2px solid #e6e6e9;
+  background: transparent;
+}
+
+.tsp-table td {
+  color: var(--text-primary);
+  font-size: 16px;
+  font-weight: 400;
+  background: transparent;
+}

@@ -16,9 +16,9 @@ export default defineConfig({
       },
 
       manifest: {
-        name: "juspay-assignment",
+        name: "Juspay Assignment - Deep",
         short_name: "juspay-assignment",
-        description: "juspay-assignment",
+        description: "A project made by Deep for Juspay Assignment",
         theme_color: "#ffffff",
       },
 
