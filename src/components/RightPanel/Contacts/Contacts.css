@@ -32,7 +32,11 @@
 .contact-item {
   display: flex;
   align-items: center;
+  cursor: default;
   gap: 12px;
+}
+.contact-item:hover {
+  scale: 1.03;
 }
 .notification-content {
   display: flex;

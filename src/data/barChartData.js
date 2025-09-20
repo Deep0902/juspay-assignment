@@ -42,10 +42,10 @@ export const revenueData = [
 ];
 
 export const totalSalesData = [
-  { name: "Direct", value: 300.56, color: "#1c1c1c" },
-  { name: "Affiliate", value: 135.18, color: "#BAEDBD" }, // Light green
-  { name: "Sponsored", value: 154.02, color: "#B1E3FF" }, // Light blue
-  { name: "E-mail", value: 48.96, color: "#95A4FC" }, // Very light blue
+  { name: "Direct", value: 300.56, color: "#1c1c1c", colorDark: "#C6C7F8" },
+  { name: "Affiliate", value: 135.18, color: "#BAEDBD", colorDark: "#BAEDBD" },
+  { name: "Sponsored", value: 154.02, color: "#B1E3FF", colorDark: "#B1E3FF" },
+  { name: "E-mail", value: 48.96, color: "#95A4FC", colorDark: "#95A4FC" },
 ];
 export const locations = [
   { name: "New York", value: 72 },

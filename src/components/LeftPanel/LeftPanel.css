@@ -20,6 +20,9 @@
   display: flex;
   width: 100%;
 }
+.toggle-switch span:hover {
+  scale: 1.03;
+}
 
 .toggle-option {
   cursor: pointer;

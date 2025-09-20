@@ -8,7 +8,7 @@ import TableFilter from "./TableFilter/TableFilter.jsx";
 import { getIconPath } from "../../util/commonFunctions";
 function HomePage() {
   const [leftPanelOpen, setLeftPanelOpen] = useState(true);
-  const [rightPanelOpen, setRightPanelOpen] = useState(false);
+  const [rightPanelOpen, setRightPanelOpen] = useState(true);
   const { theme, toggleTheme } = useTheme();
   const [useTable, setUseTable] = useState(false); // Toggle this to show TableFilter or DashboardMain
 
@@ -34,6 +34,7 @@ function HomePage() {
               <img
                 src={getIconPath("Star.svg", theme)}
                 alt="Star"
+                className="animate-grow-rotate-shrink"
                 onClick={() => setUseTable((prev) => !prev)}
               />
             </button>

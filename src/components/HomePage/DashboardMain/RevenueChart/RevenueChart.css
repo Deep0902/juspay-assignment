@@ -5,7 +5,9 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   height: 100%;
 }
-
+.revenue-chart-container:hover {
+  scale: 1.03;
+}
 .chart-header {
   display: flex;
   gap: 12px;
@@ -15,15 +17,14 @@
 
 .chart-title {
   font-size: 20px;
-  font-weight: 600;
   margin: 0;
-  color: (--text-primary);
+  color: var(--text-primary);
 }
 
 .legend {
   display: flex;
   gap: 24px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 .divider {
   color: var(--text-primary);
@@ -43,6 +44,7 @@
 }
 
 .legend-item .value {
+  font-size: 20px;
   font-weight: 600;
   color: var(--text-primary);
 }
