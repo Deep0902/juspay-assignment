@@ -15,14 +15,14 @@ const SalesDoughnutChart = () => {
                 data={totalSalesData}
                 cx="50%"
                 cy="50%"
-                innerRadius={60} // Doughnut hole size
-                outerRadius={90} // Outer radius of the doughnut
+                innerRadius={40}
+                outerRadius={70}
                 fill="#8884d8"
-                paddingAngle={0} // Space between segments
+                paddingAngle={0}
                 dataKey="value"
-                cornerRadius={12}
-                startAngle={90} // Adjust start angle to match the image's rotation
-                endAngle={-270} // Adjust end angle accordingly for a full circle from startAngle
+                cornerRadius={6}
+                startAngle={90}
+                endAngle={-270}
               >
                 {totalSalesData.map((entry, index) => (
                   <Cell key={`cell-${index}`} fill={entry.color} />

@@ -10,10 +10,12 @@
   border-radius: 12px;
   display: flex;
   flex-direction: column;
-  padding: 16px;
-  width: 170px;
+  justify-content: space-around;
+  padding: 16px 28px;
+  height: 100%;
+  width: 100%;
 }
-.card:hover{
+.card:hover {
   scale: 1.05;
 }
 .card-color-1 {
@@ -27,17 +29,18 @@
   background-color: #e5ecf6;
 }
 .heading {
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
   margin-bottom: 12px;
 }
 .numbers {
+  gap: 36px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .value {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 600;
 }
 .percentage {

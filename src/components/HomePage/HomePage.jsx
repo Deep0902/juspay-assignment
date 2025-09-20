@@ -10,6 +10,7 @@ function HomePage() {
   const [leftPanelOpen, setLeftPanelOpen] = useState(true);
   const [rightPanelOpen, setRightPanelOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
+  const [useTable, setUseTable] = useState(false); // Toggle this to show TableFilter or DashboardMain
 
   const toggleLeftPanel = () => setLeftPanelOpen(!leftPanelOpen);
   const toggleRightPanel = () => setRightPanelOpen(!rightPanelOpen);
@@ -30,7 +31,11 @@ function HomePage() {
               <img src={getIconPath("Sidebar.svg", theme)} alt="Sidebar" />
             </button>
             <button className="menu-button">
-              <img src={getIconPath("Star.svg", theme)} alt="Star" />
+              <img
+                src={getIconPath("Star.svg", theme)}
+                alt="Star"
+                onClick={() => setUseTable((prev) => !prev)}
+              />
             </button>
             <h1 className="title opacity-40">Dashboards</h1>
             <h1 className="title opacity-40">/</h1>
@@ -39,7 +44,11 @@ function HomePage() {
 
           <div className="header-right">
             <div className="search-container">
-              <img src={getIconPath("Search.svg", theme)} alt="" className="search-icon" />
+              <img
+                src={getIconPath("Search.svg", theme)}
+                alt=""
+                className="search-icon"
+              />
               <input
                 type="text"
                 placeholder="Search..."
@@ -50,7 +59,10 @@ function HomePage() {
               <img src={getIconPath("Sun.svg", theme)} alt="Sun" />
             </button>
             <button className="menu-button">
-              <img src={getIconPath("ClockCounterClockwise.svg", theme)} alt="Clock" />
+              <img
+                src={getIconPath("ClockCounterClockwise.svg", theme)}
+                alt="Clock"
+              />
             </button>
             <button className="menu-button" onClick={toggleRightPanel}>
               <img src={getIconPath("Bell.svg", theme)} alt="Bell" />
@@ -63,8 +75,7 @@ function HomePage() {
 
         {/* Main Content */}
         <main className="content">
-          {/* <TableFilter /> */}
-          <DashboardMain/>
+          {useTable ? <TableFilter /> : <DashboardMain />}
         </main>
       </div>
 

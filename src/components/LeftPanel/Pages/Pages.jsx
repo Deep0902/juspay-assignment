@@ -1,7 +1,7 @@
-import "./Pages.css";
 import { useState } from "react";
 import { pagesMenuItems } from "../../../data/leftPanel";
 import { useTheme } from "../../../ThemeContext";
+import "./Pages.css";
 
 function Pages() {
   const [expandedItems, setExpandedItems] = useState({}); // No expanded by default

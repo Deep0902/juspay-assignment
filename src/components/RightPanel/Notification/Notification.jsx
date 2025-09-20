@@ -19,7 +19,9 @@ function Notification() {
               className="notification-icon"
             />
             <div className="notification-content">
-              <div className="notification-heading">{truncateText(notif.heading)}</div>
+              <div className="notification-heading">
+                {truncateText(notif.heading)}
+              </div>
               <div className="notification-time">{notif.time}</div>
             </div>
           </div>

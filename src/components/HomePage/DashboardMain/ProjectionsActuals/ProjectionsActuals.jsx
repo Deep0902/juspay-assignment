@@ -5,7 +5,6 @@ import {
   ResponsiveContainer,
   XAxis,
   Tooltip,
-  Legend,
   YAxis,
 } from "recharts";
 import "./ProjectionsActuals.css";
@@ -23,7 +22,10 @@ const ProjectionsActuals = ({
     <div className="bar-chart-container">
       <h3 className="chart-title">{title}</h3>
 
-      <div className="chart-wrapper">
+      <div
+        className="chart-wrapper"
+        style={{ marginLeft: "-32px", width: "-webkit-fill-available" }}
+      >
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
             data={data}
@@ -61,14 +63,14 @@ const ProjectionsActuals = ({
               stackId="stack"
               fill="#A8C5DA"
               radius={[0, 0, 0, 0]}
-              maxBarSize={60}
+              barSize={25}
             />
             <Bar
               dataKey="Projections"
               stackId="stack"
               fill="#D0DFEB"
               radius={[5, 5, 0, 0]}
-              maxBarSize={60}
+              barSize={25}
             />
           </BarChart>
         </ResponsiveContainer>

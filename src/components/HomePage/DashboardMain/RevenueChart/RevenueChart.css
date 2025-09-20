@@ -3,6 +3,7 @@
   border-radius: 12px;
   padding: 24px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  height: 100%;
 }
 
 .chart-header {
@@ -61,5 +62,5 @@
 }
 
 .recharts-wrapper .recharts-surface {
-  margin-top: 15px; /* Adjusts position of the chart for the custom header */
+  margin-top: 15px;
 }

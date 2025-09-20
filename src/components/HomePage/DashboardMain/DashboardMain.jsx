@@ -6,6 +6,7 @@ import RevenueChart from "./RevenueChart/RevenueChart";
 import SalesDoughnutChart from "./SalesDoughnutChart/SalesDoughnutChart";
 import RevenueByLocation from "./RevenueByLocation/RevenueByLocation";
 import TopSellingProducts from "./TopSellingProducts/TopSellingProducts";
+import { memo } from "react";
 
 function DashboardMain() {
   return (
@@ -31,7 +32,9 @@ function DashboardMain() {
         </div>
       </div>
       <div className="sales-section">
-        <div className="sales-table"><TopSellingProducts/></div>
+        <div className="sales-table">
+          <TopSellingProducts />
+        </div>
         <div className="sales-total">
           <SalesDoughnutChart />
         </div>
@@ -40,4 +43,4 @@ function DashboardMain() {
   );
 }
 
-export default DashboardMain;
+export default memo(DashboardMain);

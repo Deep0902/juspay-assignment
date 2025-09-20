@@ -3,12 +3,14 @@
   font-optical-sizing: auto;
   /* transition: all 0.4s cubic-bezier(0.68, -0.85, 0.27, 1.85); */
   transition: all 0.2s ease-out;
+  box-sizing: border-box;
 }
 
 body {
   margin: 0;
+  padding: 0;
 }
-/* Scrollbar */
+
 *::-webkit-scrollbar {
   height: 5px;
   width: 5px;

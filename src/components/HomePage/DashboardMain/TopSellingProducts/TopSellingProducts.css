@@ -2,9 +2,11 @@
   background: var(--card-bg);
   border-radius: 18px;
   padding: 28px 24px 32px 24px;
+  height: 100%;
 }
 
 .tsp-title {
+  margin-top: 0;
   font-size: 18px;
   font-weight: 600;
   color: var(--text-primary);
@@ -26,7 +28,6 @@
 .tsp-table td {
   padding: 12px 8px;
   text-align: left;
-  /* #95999D */
   color: var(--text-primary);
 }
 

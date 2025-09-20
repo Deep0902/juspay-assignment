@@ -47,3 +47,9 @@ export const totalSalesData = [
   { name: "Sponsored", value: 154.02, color: "#B1E3FF" }, // Light blue
   { name: "E-mail", value: 48.96, color: "#95A4FC" }, // Very light blue
 ];
+export const locations = [
+  { name: "New York", value: 72 },
+  { name: "San Francisco", value: 39 },
+  { name: "Sydney", value: 25 },
+  { name: "Singapore", value: 61 },
+];

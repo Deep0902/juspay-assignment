@@ -3,29 +3,29 @@
   border-radius: 12px;
   padding: 24px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  max-width: 400px; /* Adjust max-width as needed */
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align content to the left */
+  min-width: 300px;
+  align-items: flex-start;
 }
-
+.recharts-wrapper .recharts-surface {
+  margin-top: 0 !important;
+}
 .sales-chart-title {
   font-size: 20px;
   font-weight: 600;
-  margin: 0 0 20px 0; /* Add margin below title */
+  margin: 0;
   color: var(--text-primary);
 }
 
 .chart-and-legend {
   display: flex;
-  flex-direction: column; /* Stack chart and legend vertically */
+  flex-direction: column;
   width: 100%;
 }
 
 .chart-wrapper {
-  margin-bottom: 20px; /* Space between chart and legend */
   position: relative;
-  /* To center the chart if ResponsiveContainer doesn't do it automatically due to flex column */
   align-self: center;
 }
 
@@ -36,13 +36,13 @@
 .sales-legend-item {
   display: flex;
   align-items: center;
-  margin-bottom: 12px; /* Space between legend items */
+  margin-bottom: 12px;
   font-size: 15px;
   color: var(--text-primary);
 }
 
 .sales-legend-item:last-child {
-  margin-bottom: 0; /* No margin for the last item */
+  margin-bottom: 0;
 }
 
 .sales-legend-dot {
@@ -50,11 +50,11 @@
   height: 10px;
   border-radius: 50%;
   margin-right: 10px;
-  flex-shrink: 0; /* Prevent dot from shrinking */
+  flex-shrink: 0;
 }
 
 .sales-legend-label {
-  flex-grow: 1; /* Allows the label to take available space */
+  flex-grow: 1;
   font-weight: 500;
 }
 
@@ -62,10 +62,9 @@
   font-weight: 600;
   color: var(--text-primary);
   text-align: right;
-  min-width: 70px; /* Ensure values align neatly */
+  min-width: 70px;
 }
 
-/* Custom Tooltip Styling */
 .custom-tooltip {
   background-color: #333;
   color: #fff;

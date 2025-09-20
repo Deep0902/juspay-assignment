@@ -12,18 +12,23 @@ h1 {
 }
 .test {
   display: flex;
+  gap: 28px;
 }
 .test1 {
   flex: 1;
 }
 .revenue-charts-container {
+  margin: 28px 0;
   display: flex;
+  gap: 28px;
 }
 .chart-revenue {
   flex: 1;
 }
 .sales-section {
+  margin: 28px 0;
   display: flex;
+  gap: 28px;
 }
 .sales-table {
   flex: 1;

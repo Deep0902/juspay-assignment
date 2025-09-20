@@ -2,12 +2,13 @@
   background: var(--card-bg);
   border-radius: 20px;
   padding: 28px 20px;
-  width: 240px;
+  min-width: 300px;
   font-family: "Inter", Arial, sans-serif;
   box-shadow: 0 2px 6px rgba(30, 30, 40, 0.06);
 }
 
 .location-title {
+  margin-top: 0;
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 12px;

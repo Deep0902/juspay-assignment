@@ -3,7 +3,7 @@ export function truncateText(text, maxLength = 25) {
   return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
 }
 
-export function generateNewRow(currentData, statusOptions, projectOptions) {
+export function generateNewRow(currentData, projectOptions) {
   let lastIdNum = 9800;
   if (currentData.length > 0) {
     const lastId = currentData[currentData.length - 1].id;
