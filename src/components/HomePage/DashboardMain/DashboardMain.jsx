@@ -3,6 +3,7 @@ import ProjectionsActuals from "./ProjectionsActuals/ProjectionsActuals";
 import StatsCards from "./StatsCards/StatsCards";
 import barChartData from "../../../data/barChartData";
 import RevenueChart from "./RevenueChart/RevenueChart";
+import SalesDoughnutChart from "./SalesDoughnutChart/SalesDoughnutChart";
 
 function DashboardMain() {
   return (
@@ -24,6 +25,12 @@ function DashboardMain() {
           <RevenueChart />
         </div>
         <div className="revenue-by-location"></div>
+      </div>
+      <div className="sales-section">
+        <div className="sales-table"></div>
+        <div className="sales-total">
+          <SalesDoughnutChart />
+        </div>
       </div>
     </>
   );
