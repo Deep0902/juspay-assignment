@@ -40,3 +40,10 @@ export const revenueData = [
   { month: "May", Current: 20, Previous: 14 },
   { month: "Jun", Current: 19, Previous: 22 },
 ];
+
+export const totalSalesData = [
+  { name: "Direct", value: 300.56, color: "#121212" },
+  { name: "Affiliate", value: 135.18, color: "#c3f2d2" }, // Light green
+  { name: "Sponsored", value: 154.02, color: "#b0c4de" }, // Light blue
+  { name: "E-mail", value: 48.96, color: "#d2ebfc" }, // Very light blue
+];

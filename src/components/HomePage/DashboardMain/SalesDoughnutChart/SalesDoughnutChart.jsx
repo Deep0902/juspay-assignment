@@ -1,18 +1,8 @@
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
+import { totalSalesData } from "../../../../data/barChartData";
 import "./SalesDoughnutChart.css";
 
-const data = [
-  { name: "Direct", value: 300.56, color: "#121212" },
-  { name: "Affiliate", value: 135.18, color: "#c3f2d2" }, // Light green
-  { name: "Sponsored", value: 154.02, color: "#b0c4de" }, // Light blue
-  { name: "E-mail", value: 48.96, color: "#d2ebfc" }, // Very light blue
-];
-
 const SalesDoughnutChart = () => {
-  // Calculate total for percentage display in legend if needed, though not directly in the image's legend
-  // For the custom tooltip, we calculate it inside CustomTooltip component
-  const totalSales = data.reduce((sum, entry) => sum + entry.value, 0);
-
   return (
     <div className="sales-chart-container">
       <h3 className="sales-chart-title">Total Sales</h3>
@@ -22,18 +12,19 @@ const SalesDoughnutChart = () => {
             <PieChart>
               <Tooltip />
               <Pie
-                data={data}
+                data={totalSalesData}
                 cx="50%"
                 cy="50%"
                 innerRadius={60} // Doughnut hole size
                 outerRadius={90} // Outer radius of the doughnut
                 fill="#8884d8"
-                paddingAngle={5} // Space between segments
+                paddingAngle={0} // Space between segments
                 dataKey="value"
+                cornerRadius={12}
                 startAngle={90} // Adjust start angle to match the image's rotation
                 endAngle={-270} // Adjust end angle accordingly for a full circle from startAngle
               >
-                {data.map((entry, index) => (
+                {totalSalesData.map((entry, index) => (
                   <Cell key={`cell-${index}`} fill={entry.color} />
                 ))}
               </Pie>
@@ -42,7 +33,7 @@ const SalesDoughnutChart = () => {
         </div>
 
         <div className="sales-legend">
-          {data.map((entry, index) => (
+          {totalSalesData.map((entry, index) => (
             <div className="sales-legend-item" key={`legend-${index}`}>
               <span
                 className="sales-legend-dot"
