@@ -1,3 +1,4 @@
+import { memo } from "react";
 import contacts from "../../../data/contacts";
 import { truncateText } from "../../../util/commonFunctions";
 import "./Contacts.css";
@@ -25,4 +26,4 @@ function Contacts() {
   );
 }
 
-export default Contacts;
+export default memo(Contacts);

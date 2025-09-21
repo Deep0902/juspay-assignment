@@ -18,7 +18,6 @@ function DashboardMain() {
         </div>
         <div className="test1">
           <ProjectionsActuals
-            data={barChartData}
             title="Projections vs Actuals"
           />
         </div>

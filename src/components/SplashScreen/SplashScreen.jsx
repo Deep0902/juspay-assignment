@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { memo, useEffect, useState } from "react";
 import "./SplashScreen.css";
 
 const SplashScreen = ({ onAnimationComplete }) => {
@@ -6,18 +6,16 @@ const SplashScreen = ({ onAnimationComplete }) => {
   const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
-    // Start fade out after 3.5 seconds
     const fadeOutTimer = setTimeout(() => {
       setFadeOut(true);
     }, 3500);
 
-    // Complete animation and hide splash screen after fade out
     const completeTimer = setTimeout(() => {
       setIsVisible(false);
       if (onAnimationComplete) {
         onAnimationComplete();
       }
-    }, 4500); // 3.5s + 1s fade out
+    }, 4500);
 
     return () => {
       clearTimeout(fadeOutTimer);
@@ -36,10 +34,10 @@ const SplashScreen = ({ onAnimationComplete }) => {
       </div>
 
       <div className="splash-text">
-        <h1 className="splash-title">Assignment submitted by Deep</h1>
+        <h1 className="splash-title">Assignment Submission by Deep</h1>
       </div>
     </div>
   );
 };
 
-export default SplashScreen;
+export default memo(SplashScreen);

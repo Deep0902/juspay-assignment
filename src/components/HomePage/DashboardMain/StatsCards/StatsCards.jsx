@@ -2,6 +2,7 @@ import "./StatsCards.css";
 import cardsData from "../../../../data/cardsData";
 import { getIconPath } from "../../../../util/commonFunctions";
 import { useTheme } from "../../../../ThemeContext";
+import { memo } from "react";
 function StatsCards() {
   const { theme } = useTheme();
   return (
@@ -31,4 +32,4 @@ function StatsCards() {
   );
 }
 
-export default StatsCards;
+export default memo(StatsCards);

@@ -175,106 +175,108 @@ function TableFilter() {
       </div>
 
       {/* Table */}
-      <table className="data-table">
-        <thead>
-          <tr>
-            <th>
-              <input
-                type="checkbox"
-                className="checkbox"
-                checked={
-                  selectedRows.size === paginatedData.length &&
-                  paginatedData.length > 0
-                }
-                onChange={handleSelectAll}
-              />
-            </th>
-            <th onClick={() => handleSort("id")}>
-              <div className="sortable-header">
-                Order ID
-                {renderSortIndicator("id")}
-              </div>
-            </th>
-            <th onClick={() => handleSort("user")}>
-              <div className="sortable-header">
-                User
-                {renderSortIndicator("user")}
-              </div>
-            </th>
-            <th onClick={() => handleSort("project")}>
-              <div className="sortable-header">
-                Project
-                {renderSortIndicator("project")}
-              </div>
-            </th>
-            <th onClick={() => handleSort("address")}>
-              <div className="sortable-header">
-                Address
-                {renderSortIndicator("address")}
-              </div>
-            </th>
-            <th onClick={() => handleSort("date")}>
-              <div className="sortable-header">
-                Date
-                {renderSortIndicator("date")}
-              </div>
-            </th>
-            <th onClick={() => handleSort("status")}>
-              <div className="sortable-header">
-                Status
-                {renderSortIndicator("status")}
-              </div>
-            </th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody>
-          {paginatedData.length > 0 ? (
-            paginatedData.map((item) => (
-              <tr key={item.id}>
-                <td>
-                  <input
-                    type="checkbox"
-                    className="checkbox"
-                    checked={selectedRows.has(item.id)}
-                    onChange={() => handleRowSelect(item.id)}
-                  />
-                </td>
-                <td>{item.id}</td>
-                <td>
-                  <div className="user-cell">
-                    <img src={item.user.avatar} alt={item.user.name} />
-                    <span>{item.user.name}</span>
-                  </div>
-                </td>
-                <td>{item.project}</td>
-                <td>{item.address}</td>
-                <td>
-                  <div className="date-cell">
-                    <img src={iconPath("Calendar")} alt="" /> {item.date}
-                  </div>
-                </td>
-                <td>
-                  <span
-                    className={`status-badge ${getStatusClass(item.status)}`}
-                  >
-                    {item.status}
-                  </span>
-                </td>
-                <td className="actions-cell">
-                  <button className="more-actions">⋯</button>
+      <div className="data-table-scrollable">
+        <table className="data-table">
+          <thead>
+            <tr>
+              <th>
+                <input
+                  type="checkbox"
+                  className="checkbox"
+                  checked={
+                    selectedRows.size === paginatedData.length &&
+                    paginatedData.length > 0
+                  }
+                  onChange={handleSelectAll}
+                />
+              </th>
+              <th onClick={() => handleSort("id")}>
+                <div className="sortable-header">
+                  Order ID
+                  {renderSortIndicator("id")}
+                </div>
+              </th>
+              <th onClick={() => handleSort("user")}>
+                <div className="sortable-header">
+                  User
+                  {renderSortIndicator("user")}
+                </div>
+              </th>
+              <th onClick={() => handleSort("project")}>
+                <div className="sortable-header">
+                  Project
+                  {renderSortIndicator("project")}
+                </div>
+              </th>
+              <th onClick={() => handleSort("address")}>
+                <div className="sortable-header">
+                  Address
+                  {renderSortIndicator("address")}
+                </div>
+              </th>
+              <th onClick={() => handleSort("date")}>
+                <div className="sortable-header">
+                  Date
+                  {renderSortIndicator("date")}
+                </div>
+              </th>
+              <th onClick={() => handleSort("status")}>
+                <div className="sortable-header">
+                  Status
+                  {renderSortIndicator("status")}
+                </div>
+              </th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {paginatedData.length > 0 ? (
+              paginatedData.map((item) => (
+                <tr key={item.id}>
+                  <td>
+                    <input
+                      type="checkbox"
+                      className="checkbox"
+                      checked={selectedRows.has(item.id)}
+                      onChange={() => handleRowSelect(item.id)}
+                    />
+                  </td>
+                  <td>{item.id}</td>
+                  <td>
+                    <div className="user-cell">
+                      <img src={item.user.avatar} alt={item.user.name} />
+                      <span>{item.user.name}</span>
+                    </div>
+                  </td>
+                  <td>{item.project}</td>
+                  <td>{item.address}</td>
+                  <td>
+                    <div className="date-cell">
+                      <img src={iconPath("Calendar")} alt="" /> {item.date}
+                    </div>
+                  </td>
+                  <td>
+                    <span
+                      className={`status-badge ${getStatusClass(item.status)}`}
+                    >
+                      {item.status}
+                    </span>
+                  </td>
+                  <td className="actions-cell">
+                    <button className="more-actions">⋯</button>
+                  </td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan="8" className="no-results">
+                  No results found
                 </td>
               </tr>
-            ))
-          ) : (
-            <tr>
-              <td colSpan="8" className="no-results">
-                No results found
-              </td>
-            </tr>
-          )}
-        </tbody>
-      </table>
+            )}
+          </tbody>
+        </table>
+      </div>
 
       {/* Pagination */}
       {totalPages > 1 && (
