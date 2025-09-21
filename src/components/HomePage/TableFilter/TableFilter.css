@@ -4,7 +4,6 @@ h2 {
 
 .data-table-container {
   background: var(--bg-primary);
-  overflow: auto;
 }
 
 .table-header {
@@ -16,6 +15,11 @@ h2 {
   gap: 16px;
   padding: 6px;
   border-radius: 8px;
+  width: 100%;
+}
+.data-table-scrollable {
+  overflow-x: auto;
+  width: 100%;
 }
 
 .header-left {
