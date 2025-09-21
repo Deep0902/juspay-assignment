@@ -4,6 +4,7 @@ import Notification from "./Notification/Notification";
 import { useTheme } from "../../ThemeContext";
 import { getIconPath } from "../../util/commonFunctions";
 import "./RightPanel.css";
+import { memo } from "react";
 
 function RightPanel({ onClose }) {
   const { theme } = useTheme();
@@ -22,4 +23,4 @@ function RightPanel({ onClose }) {
     </>
   );
 }
-export default RightPanel;
+export default memo(RightPanel);

@@ -1,5 +1,6 @@
 import "./TopSellingProducts.css";
 import { products } from "../../../../data/tableData";
+import { memo } from "react";
 
 function TopSellingProducts() {
   return (
@@ -37,4 +38,4 @@ function TopSellingProducts() {
   );
 }
 
-export default TopSellingProducts;
+export default memo(TopSellingProducts);

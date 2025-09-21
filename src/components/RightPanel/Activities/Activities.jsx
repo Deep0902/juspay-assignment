@@ -1,3 +1,4 @@
+import { memo } from "react";
 import activities from "../../../data/activities";
 import { truncateText } from "../../../util/commonFunctions";
 import "./Activities.css";
@@ -32,4 +33,4 @@ function Activities() {
   );
 }
 
-export default Activities;
+export default memo(Activities);

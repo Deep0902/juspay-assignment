@@ -2,6 +2,7 @@ import "./RevenueByLocation.css";
 import { getIconPath } from "../../../../util/commonFunctions";
 import { useTheme } from "../../../../ThemeContext";
 import { locations } from "../../../../data/barChartData";
+import { memo } from "react";
 
 function RevenueByLocation() {
   const { theme } = useTheme();
@@ -31,4 +32,4 @@ function RevenueByLocation() {
   );
 }
 
-export default RevenueByLocation;
+export default memo(RevenueByLocation);

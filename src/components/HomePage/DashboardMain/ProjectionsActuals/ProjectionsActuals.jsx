@@ -8,6 +8,7 @@ import {
   YAxis,
 } from "recharts";
 import "./ProjectionsActuals.css";
+import { memo } from "react";
 
 const ProjectionsActuals = ({
   data = barChartData,
@@ -81,4 +82,4 @@ const ProjectionsActuals = ({
   );
 };
 
-export default ProjectionsActuals;
+export default memo(ProjectionsActuals);

@@ -50,7 +50,6 @@
   text-shadow: none;
 }
 
-/* Animations */
 @keyframes logoFadeIn {
   0% {
     opacity: 0;
