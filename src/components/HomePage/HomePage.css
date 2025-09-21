@@ -11,7 +11,7 @@
   border-right: 1px solid var(--border-color-default);
   overflow: hidden;
   backdrop-filter: blur(10px);
-  background: var(--bg-primary);
+  /* background: var(--bg-primary); */
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
@@ -142,6 +142,7 @@
 }
 
 .search-input {
+  color: var(--text-primary);
   padding-left: 40px;
   padding-right: 16px;
   padding-top: 8px;
@@ -150,7 +151,6 @@
   border-radius: 6px;
   outline: none;
   background: var(--search-bg);
-  backdrop-filter: blur(5px);
 }
 
 .search-input:focus {
@@ -246,7 +246,7 @@
 }
 
 .animate-grow-rotate-shrink {
-  animation: grow-rotate-shrink 3s cubic-bezier(0.68, -0.55, 0.27, 1.55) 3s
+  animation: grow-rotate-shrink 3s cubic-bezier(0.68, -0.55, 0.27, 1.55) 0.1s
     infinite;
   display: inline-block;
 }

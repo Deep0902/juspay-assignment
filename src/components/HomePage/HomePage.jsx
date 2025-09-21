@@ -1,11 +1,11 @@
 import { useState } from "react";
-import "./HomePage.css";
 import { useTheme } from "../../ThemeContext.jsx";
-import RightPanel from "../RightPanel/RightPanel.jsx";
-import LeftPanel from "../LeftPanel/LeftPanel.jsx";
-import DashboardMain from "./DashboardMain/DashboardMain.jsx";
-import TableFilter from "./TableFilter/TableFilter.jsx";
 import { getIconPath } from "../../util/commonFunctions";
+import LeftPanel from "../LeftPanel/LeftPanel.jsx";
+import RightPanel from "../RightPanel/RightPanel.jsx";
+import DashboardMain from "./DashboardMain/DashboardMain.jsx";
+import "./HomePage.css";
+import TableFilter from "./TableFilter/TableFilter.jsx";
 function HomePage() {
   const [leftPanelOpen, setLeftPanelOpen] = useState(true);
   const [rightPanelOpen, setRightPanelOpen] = useState(true);
