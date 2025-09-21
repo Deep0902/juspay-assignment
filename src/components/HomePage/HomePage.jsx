@@ -28,7 +28,7 @@ function HomePage() {
       )}
       {/* Left Drawer */}
       <div className={`left-panel ${leftPanelOpen ? "open" : "closed"}`}>
-        <LeftPanel />
+        <LeftPanel onClose={() => setLeftPanelOpen(false)} />
       </div>
 
       {/* Main Content Area */}
@@ -91,7 +91,7 @@ function HomePage() {
 
       {/* Right Drawer */}
       <div className={`right-panel ${rightPanelOpen ? "open" : "closed"}`}>
-        <RightPanel />
+        <RightPanel onClose={() => setRightPanelOpen(false)} />
       </div>
     </div>
   );
