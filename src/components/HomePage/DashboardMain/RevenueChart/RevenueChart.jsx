@@ -8,6 +8,7 @@ import {
 } from "recharts";
 import { revenueData } from "../../../../data/barChartData";
 import "./RevenueChart.css";
+import { memo } from "react";
 
 const RevenueChart = () => {
   return (
@@ -69,4 +70,4 @@ const RevenueChart = () => {
   );
 };
 
-export default RevenueChart;
+export default memo(RevenueChart);

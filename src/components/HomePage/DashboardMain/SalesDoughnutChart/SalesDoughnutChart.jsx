@@ -1,7 +1,8 @@
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
 import { totalSalesData } from "../../../../data/barChartData";
-import "./SalesDoughnutChart.css";
 import { useTheme } from "../../../../ThemeContext";
+import { memo } from "react";
+import "./SalesDoughnutChart.css"
 
 const SalesDoughnutChart = () => {
   const { theme } = useTheme();
@@ -60,4 +61,4 @@ const SalesDoughnutChart = () => {
   );
 };
 
-export default SalesDoughnutChart;
+export default memo(SalesDoughnutChart);

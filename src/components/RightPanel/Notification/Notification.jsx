@@ -2,6 +2,7 @@ import "./Notification.css";
 
 import notifications from "../../../data/notifications";
 import { truncateText } from "../../../util/commonFunctions";
+import { memo } from "react";
 
 function Notification() {
   return (
@@ -31,4 +32,4 @@ function Notification() {
   );
 }
 
-export default Notification;
+export default memo(Notification);
