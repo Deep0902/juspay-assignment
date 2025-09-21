@@ -4,7 +4,6 @@
 
 .sidebar-container {
   width: 250px;
-  background-color: var(--bg-primary);
   padding: 16px;
   overflow: auto;
 }

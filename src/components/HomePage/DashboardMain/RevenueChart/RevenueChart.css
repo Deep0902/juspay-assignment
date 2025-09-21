@@ -63,6 +63,10 @@
   background-color: #a8c5da;
 }
 
-.recharts-wrapper .recharts-surface {
-  margin-top: 15px;
+.revenue-chart-container .recharts-wrapper .recharts-surface {
+  margin-left: -32px !important;
 }
+/* @media (max-width: 768px) {
+  .revenue-chart-container .recharts-wrapper .recharts-surface svg{
+  }
+} */

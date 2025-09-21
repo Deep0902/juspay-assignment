@@ -4,6 +4,7 @@ h2 {
 
 .data-table-container {
   background: var(--bg-primary);
+  overflow: auto;
 }
 
 .table-header {

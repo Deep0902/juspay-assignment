@@ -49,3 +49,28 @@
   display: flex;
   align-items: center;
 }
+@media (max-width: 768px) {
+  .card:nth-child(odd),
+  .card:nth-child(even) {
+    justify-self: stretch;
+  }
+
+  .card {
+    max-width: none;
+    width: 100%;
+    padding: 16px 12px;
+    gap: 8px;
+  }
+
+  .numbers {
+    gap: 16px;
+  }
+
+  .value {
+    font-size: 20px;
+  }
+
+  .heading {
+    font-size: 16px;
+  }
+}
