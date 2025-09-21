@@ -33,3 +33,29 @@ h1 {
 .sales-table {
   flex: 1;
 }
+/* Add this at the end of your DashboardMain.css file */
+@media (max-width: 768px) {
+  .test,
+  .revenue-charts-container,
+  .sales-section {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .stat-card-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  
+  .test {
+    gap: 20px;
+  }
+  
+  .revenue-charts-container {
+    margin: 20px 0;
+  }
+  
+  .sales-section {
+    margin: 20px 0;
+  }
+}

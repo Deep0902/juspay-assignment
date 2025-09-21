@@ -17,7 +17,7 @@ function StatsCards() {
             <div className="numbers">
               <span className="value">{card.value}</span>
               <span className="percentage">
-                {card.percentage}%
+                {card.percentage}%&nbsp;
                 <img
                   src={getIconPath(`${card.icon}.svg`, iconTheme)}
                   alt="Sidebar"

@@ -2,10 +2,20 @@ import { useState } from "react";
 import Dashboard from "./Dashboard/Dashboard";
 import "./LeftPanel.css";
 import Pages from "./Pages/Pages";
-function LeftPanel() {
+import { getIconPath } from "../../util/commonFunctions";
+import { useTheme } from "../../ThemeContext";
+function LeftPanel({ onClose }) {
+  const { theme } = useTheme();
   const [selectedToggle, setSelectedToggle] = useState("Favourites");
   return (
     <>
+      <button
+        className="left-panel-close-btn"
+        onClick={onClose}
+        aria-label="Close left panel"
+      >
+        <img src={getIconPath("Sidebar.svg", theme)} alt="Sidebar" />
+      </button>
       <div className="left-panel-content">
         <div className="profile">
           <img src="/Profile.svg" alt="" />
