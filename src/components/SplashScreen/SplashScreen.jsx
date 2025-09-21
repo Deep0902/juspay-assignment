@@ -34,7 +34,7 @@ const SplashScreen = ({ onAnimationComplete }) => {
       </div>
 
       <div className="splash-text">
-        <h1 className="splash-title">Assignment submitted by Deep</h1>
+        <h1 className="splash-title">Assignment Submission by Deep</h1>
       </div>
     </div>
   );

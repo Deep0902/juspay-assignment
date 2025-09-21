@@ -8,10 +8,10 @@ import "./HomePage.css";
 import TableFilter from "./TableFilter/TableFilter.jsx";
 import SplashScreen from "../SplashScreen/SplashScreen.jsx";
 function HomePage() {
-  const [leftPanelOpen, setLeftPanelOpen] = useState(true);
-  const [rightPanelOpen, setRightPanelOpen] = useState(true);
+  const [leftPanelOpen, setLeftPanelOpen] = useState(window.innerWidth > 768);
+  const [rightPanelOpen, setRightPanelOpen] = useState(window.innerWidth > 768);
   const { theme, toggleTheme } = useTheme();
-  const [useTable, setUseTable] = useState(false); // Toggle this to show TableFilter or DashboardMain
+  const [useTable, setUseTable] = useState(false);
 
   const toggleLeftPanel = () => setLeftPanelOpen(!leftPanelOpen);
   const toggleRightPanel = () => setRightPanelOpen(!rightPanelOpen);

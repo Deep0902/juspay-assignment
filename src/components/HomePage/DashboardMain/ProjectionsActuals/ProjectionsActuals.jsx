@@ -9,11 +9,8 @@ import {
 } from "recharts";
 import "./ProjectionsActuals.css";
 import { memo } from "react";
-
-const ProjectionsActuals = ({
-  data = barChartData,
-  title = "Projections vs Actuals",
-}) => {
+import barChartData from "../../../../data/barChartData";
+const ProjectionsActuals = ({ title = "Projections vs Actuals" }) => {
   const formatYAxis = (value) => {
     if (value === 0) return "0";
     return `${value}M`;
@@ -31,7 +28,7 @@ const ProjectionsActuals = ({
       >
         <ResponsiveContainer width="100%" height="100%">
           <BarChart
-            data={data}
+            data={barChartData}
             margin={{
               top: 20,
               right: 30,

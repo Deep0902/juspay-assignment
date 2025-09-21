@@ -141,6 +141,7 @@ h2 {
   vertical-align: middle;
   background-color: var(--bg-primary);
   transition: all 0.2s ease-out;
+  white-space: nowrap;
 }
 .data-table th {
   border-radius: 8px;
