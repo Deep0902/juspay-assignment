@@ -68,9 +68,23 @@
 }
 @media (max-width: 768px) {
   .dot {
-    width: 12px;
+    width: 8px;
   }
-  .chart-title{
+  .chart-title {
     font-size: 16px;
+  }
+  .chart-header {
+    gap: 8px;
+  }
+  .legend{
+    margin-left: auto;
+    flex-direction: column;
+  }
+  .legend-item {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .legend-item .value {
+    font-size: 12px;
   }
 }
