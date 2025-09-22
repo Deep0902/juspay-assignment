@@ -27,10 +27,8 @@ const SalesDoughnutChart = () => {
                   border: "none",
                   background: theme === "dark" ? "#1C1C1C" : "#f7f9fb",
                   color: theme === "dark" ? "#FFFFFF" : "#1C1C1C",
-                  fontFamily: "Inter, sans-serif",
                 }}
                 itemStyle={{
-                  fontFamily: "Inter, sans-serif",
                   fontSize: "12px",
                   fontWeight: "400",
                   color: theme === "dark" ? "#FFFFFF" : "#1C1C1C",
@@ -63,47 +61,18 @@ const SalesDoughnutChart = () => {
 
         <div className="sales-legend">
           {totalSalesData.map((item, index) => (
-            <div
-              className="sales-legend-item"
-              key={index}
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                padding: "8px 0",
-              }}
-            >
-              <div
-                style={{ display: "flex", alignItems: "center", gap: "6px" }}
-              >
+            <div className="sales-legend-item" key={index}>
+              <div>
                 <span
                   className="sales-legend-dot"
                   style={{
                     backgroundColor:
                       theme === "dark" ? item.colorDark : item.color,
-                    width: 14,
-                    height: 14,
-                    borderRadius: "50%",
-                    display: "inline-block",
                   }}
                 ></span>
-                <span
-                  className="sales-legend-label"
-                  style={{
-                    fontSize: 12,
-                    color: theme === "dark" ? "#FFFFFF" : "#1C1C1C",
-                  }}
-                >
-                  {item.name}
-                </span>
+                <span className="sales-legend-label">{item.name}</span>
               </div>
-              <span
-                className="sales-legend-value number-font"
-                style={{
-                  fontSize: 12,
-                  color: theme === "dark" ? "#FFFFFF" : "#1C1C1C",
-                }}
-              >
+              <span className="sales-legend-value number-font">
                 ${item.value}
               </span>
             </div>

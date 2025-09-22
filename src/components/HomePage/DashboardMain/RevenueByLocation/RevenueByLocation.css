@@ -1,6 +1,6 @@
 .location-card {
   background: var(--card-bg);
-  border-radius: 20px;
+  border-radius: 12px;
   padding: 28px 20px;
   min-width: 200px;
   height: 100%;
